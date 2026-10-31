@@ -50,8 +50,21 @@ const decisions=vm.runInNewContext('('+decisionLiteral[1]+')',{}, {timeout:1000}
 const quests=current.quests.map(q=>({id:q.id,title:q.title,description:q.description,group:q.group,source:q.source}));
 const findings=[...(registry['project-comparison']?.projectComparison?.findings||[]),...(registry['document-library']?.documentLibrary?.projectChecks?.checks||[]).filter(f=>!f.status.startsWith('Aligned')).map(f=>({id:'library-'+f.id,title:f.title,project:f.project,kind:f.status}))];
 const data={edition:new Date().toISOString().slice(0,10),authority:editorial.authority,sourceDigest:digest,sourceGeneratedAt:current.generatedAt,hero:editorial.hero,regions:editorial.regions,characters,schools:editorial.schools,faq:editorial.faq,decisions,alignment:authored.alignment,chapters:current.chapters,quests,categories,entries,audit:editorial.decisions,unresolved:editorial.unresolved,sourceFindings:findings.map(f=>({id:f.id,title:f.title,project:f.project,kind:f.kind})),coverage:{combat:combat.entries.length,systems:entries.length-combat.entries.length,quests:quests.length,atlasFeatures:featureMap.size,sourceFiles:Object.keys(sources).length}};
-// Presentation prose is reviewed; raw dialogue, source code and private documents are never bundled.
-fs.writeFileSync(path.join(root,'dist/site-data.json'),JSON.stringify(data));
-fs.writeFileSync(path.join(root,'dist/sync-status.json'),JSON.stringify({authority:data.authority,builtAt:new Date().toISOString(),sourceDigest:digest,coverage:data.coverage}));
+// Source records, review notes and hashes live in the private checkout, never in dist.
+const guidePath=path.join(root,'content/player-guide.json');
+if(!fs.existsSync(guidePath))throw Error('Player guide curation is required before publication.');
+const guide=json(guidePath);
+const reviewedEntries=Array.isArray(guide)?guide:guide.entries;
+const curated=new Map(reviewedEntries.map(e=>[e.id,e]));
+for(const e of entries){
+ const c=curated.get(e.id);
+ if(!c||c.sourceFingerprint!==hash(JSON.stringify(e)))throw Error('Player copy needs review for changed source entry: '+e.id);
+}
+for(const id of curated.keys())if(!checkedIds.has(id))throw Error('Source entry removed; review player guide: '+id);
+const publicEntries=entries.map(e=>curated.get(e.id)).filter(e=>e.publish).map(e=>({id:e.id,title:e.title,category:e.category,school:e.school||'',summary:e.summary,body:e.body,stats:e.stats||[],tags:e.tags||[],related:(e.related||[]).filter(id=>curated.get(id)?.publish)}));
+const publicData={hero:editorial.hero,regions:editorial.regions.map(({id,name,place,image,description})=>({id,name,place,image,description})),characters:characters.map(({id,name,role,intro,detail})=>({id,name,role,intro,detail})),schools:editorial.schools,faq:editorial.faq,decisions:decisions.map(({id,title,good,evil,setup,consequence,after})=>({id,title,good,evil,setup,consequence,after})),quests:quests.map(({id,title,description})=>({id,title,description:description.replace('existing dungeon route','dungeon passage').replace('existing evacuation','evacuation')})),categories:categories.map(({id,title})=>({id,title})),entries:publicEntries};
+fs.writeFileSync(path.join(root,'content/source-snapshot.json'),JSON.stringify(data));
+fs.writeFileSync(path.join(root,'dist/game-data.json'),JSON.stringify(publicData));
+fs.writeFileSync(path.join(root,'content/sync-status.json'),JSON.stringify({authority:data.authority,builtAt:new Date().toISOString(),sourceDigest:digest,coverage:data.coverage,playerEntries:publicEntries.length},null,2)+'\n');
 fs.writeFileSync(baseline,JSON.stringify({reviewedAt:new Date().toISOString(),digest,sources},null,2)+'\n');
 console.log(JSON.stringify({ok:true,digest,changedFiles:changed.length,coverage:data.coverage}));

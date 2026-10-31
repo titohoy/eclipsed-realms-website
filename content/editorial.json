@@ -3,16 +3,16 @@
   "hero": {
     "eyebrow": "A DARK FANTASY ACTION RPG",
     "title": "The realm remembers.",
-    "description": "Dangerous magic. Uneasy loyalties. A world shaped by what you choose to do—and by those who survive to remember it.",
-    "intro": "You survived what should have killed you. Beneath an old house, a mysterious Doll offers a way forward. Beyond its walls lie frightened villages, a divided kingdom, and people whose faith can be as dangerous as the creatures in the dark."
+    "description": "Enter a dark fantasy action RPG where dangerous magic, uneasy alliances and your choices shape the journey.",
+    "intro": "You survived what should have killed you. Beneath an old house, a mysterious Doll offers a way forward. Beyond its walls, villages cling to faith, a kingdom holds its breath, and something waits in the dark."
   },
   "regions": [
     {
       "id": "awakening",
       "name": "The awakening",
-      "place": "THE OLD HOUSE & START VILLAGE",
+      "place": "THE OLD HOUSE",
       "image": "village_day.webp",
-      "description": "A cage beneath an old house. A voice with answers of her own. Your first steps lead through the attic and into a village gathering, where your response becomes part of your personal history.",
+      "description": "A cage beneath an old house. A voice with answers of her own. Follow the Doll’s guidance into a village gathering, where even your first response can leave a lasting impression.",
       "source": "current-project.chapters.opening; current-project.quests.Q01/Q02/Q03"
     },
     {
@@ -20,7 +20,7 @@
       "name": "Thornhallow",
       "place": "THE HIDDEN VILLAGE",
       "image": "hidden_village.webp",
-      "description": "The Veyne daughters run the Hidden Village while their father, Garran, lives with the consequences of his past. Their community connects your journey to Lucan, their brother and the Kingdom’s Mage.",
+      "description": "A hidden community led by the Veyne sisters. Earn their trust, meet their withdrawn father and follow a family’s story from the quiet village to the heart of the Kingdom.",
       "source": "CANON_Characters_User_2026-10-31.md: family addenda"
     },
     {
@@ -28,7 +28,7 @@
       "name": "Cairnhold",
       "place": "THE KINGDOM",
       "image": "city_night.webp",
-      "description": "Wealth and influence gather above; working people bear the weight of guards, taxes and curfews below. The Crown offers protection and harsh justice. Beneath its streets, the Thieves hold a society of their own.",
+      "description": "Above the crowded streets, wealth and influence gather around the Crown. Below, ordinary people live with taxes, curfews and harsh justice—and the Thieves keep a society of their own.",
       "source": "current-project.chapters.mage; character canon addendum 3"
     },
     {
@@ -36,7 +36,7 @@
       "name": "The Cult’s domain",
       "place": "CULT VILLAGE & SIXFOLD CRUCIBLE",
       "image": "demon_arena.webp",
-      "description": "The Cult practises sacrifice and worships Dark magic. Its human followers do not all understand what their rituals serve. The Crucible is part of the story’s ordeal; it is distinct from the Doll’s Training Arena.",
+      "description": "Ritual and sacrifice bind the Cult’s followers together. Seek answers among them, then face the ordeal waiting inside the Sixfold Crucible.",
       "source": "character canon addenda 2–5; current-project.chapters.ordeal"
     },
     {
@@ -44,7 +44,7 @@
       "name": "Beyond the familiar",
       "place": "IRON VOW HOLD & WITCH TERRITORIES",
       "image": "ram_ruins.webp",
-      "description": "The Templars belong to Iron Vow Hold, a separate realm. The Plague Doctors belong to the Witch region. Neither group should be mistaken for a branch of the Kingdom’s royal forces.",
+      "description": "The road reaches beyond the Kingdom: to the Templars of Iron Vow Hold, the Witch territories and the Plague Doctors who dwell there. Every place has its own loyalties.",
       "source": "character canon addendum 4"
     }
   ],
@@ -53,56 +53,56 @@
       "id": "doll",
       "npc": "NPC_CursedDoll1",
       "role": "A VOICE IN THE DARK",
-      "intro": "She offers guidance and useful services. That does not make her trustworthy.",
-      "detail": "The Hidden Village’s ancestors created her as a vessel for Dark magic. She developed a will of her own and manipulates others toward bloodshed and ritual. The Doll is the seal itself, not a guardian of a separate seal beneath the house.",
+      "intro": "A small companion with unsettling answers. She offers guidance, training and a way to travel—but trust is yours to give.",
+      "detail": "The Hidden Village’s ancestors created the Doll as a vessel for Dark magic. She gained a will of her own and now draws others toward bloodshed and ritual. The seal and the Doll are one and the same.",
       "image": "doll_close1.webp"
     },
     {
       "id": "corven",
       "npc": "NPC_MainPriest1",
       "role": "FAITH & RESPONSIBILITY",
-      "intro": "A priest whose renewed conviction has consequences he does not fully understand.",
-      "detail": "The Doll guided Corven to the Relief and the Start Village. He believed killing fed his god and brought salvation. He intended to summon the Demon Father, but summoned the Nun. Manipulation does not erase his responsibility; neither does it mean he knowingly understood the whole scheme.",
+      "intro": "A priest who found renewed faith in a mysterious power. His conviction reaches far beyond the church doors.",
+      "detail": "The Doll guided Corven to a Relief and the village. He believed sacrifice fed his god and brought salvation. Seeking the Demon Father, he summoned the Nun instead. What he believes and what he has helped cause are very different things.",
       "image": "ritual_chamber.webp"
     },
     {
       "id": "garran",
       "npc": "NPC_OldMan1",
       "role": "THE HIDDEN VILLAGE",
-      "intro": "A Holy-magic teacher who has sworn off casting. He guides the player rather than performing the ritual himself.",
-      "detail": "Garran unintentionally harmed his wife with magic; she died, and he withdrew. His daughters took responsibility for the village. His connection to the Doll is ancestral: he did not personally create her.",
+      "intro": "A teacher of Holy magic who has sworn off casting. Reaching him means understanding the grief behind his retreat.",
+      "detail": "Garran accidentally harmed his wife with magic, and she died. He withdrew, leaving his daughters to lead the village. He can guide your own use of Holy magic, though he no longer casts it himself.",
       "image": "hidden_village.webp"
     },
     {
       "id": "lucan",
       "npc": "NPC_Mage1",
       "role": "THE KINGDOM’S MAGE",
-      "intro": "Garran’s son and the daughters’ brother. A practitioner of Blood magic who protects the royal couple.",
-      "detail": "Lucan pursued mastery while wanting to use his power for good. He can become an ally against the Demon Father. On the Cult route he is the Kingdom’s final defender; his Blood shield carries him, the King and the Queen to safety.",
+      "intro": "A master of Blood magic and protector of the King and Queen. His pursuit of power began with a wish to do good.",
+      "detail": "Garran’s son and the Veyne sisters’ brother, Lucan can become an ally against the Demon Father. If you march with the Cult, he stands as the Kingdom’s final defender. His Blood shield carries him and the royal couple to safety when the Kingdom falls.",
       "image": "royalty.webp"
     },
     {
       "id": "daughters",
       "name": "The Veyne daughters",
       "role": "LEADERS OF THORNHALLOW",
-      "intro": "Tressa and Nerys run the village. Each has her own relationship with you, and each makes her own choice about helping.",
-      "detail": "They are Garran’s daughters and Lucan’s sisters. Earning one sister’s support does not earn the other’s. Their established difference in manner remains; invented romance assignments are not canon.",
+      "intro": "Tressa and Nerys lead Thornhallow. Get to know each sister: their trust and their support must be earned individually.",
+      "detail": "They are Garran’s daughters and Lucan’s sisters. After their mother’s death and their father’s withdrawal, they took responsibility for the village. Earning one sister’s support does not automatically earn the other’s.",
       "image": "hidden_village.webp"
     },
     {
       "id": "nun",
       "name": "The Nun",
       "role": "AN IMPOSSIBLE PRESENCE",
-      "intro": "The main Nun is the Witch Nun / Witch Priest. The City Nun is a separate person.",
-      "detail": "The attic and Cult Arena sequences are memory experiences. The main Nun summons the six Greater Flesh Demons; her later sacrifice manifests the separate Demon Father. Her earlier healer/plague origin is still unresolved, and no resurrection story is assumed.",
+      "intro": "A supernatural presence whose appearances lead you deeper into the mystery surrounding the village.",
+      "detail": "Corven’s summoning brought the Nun into the story. The attic and Crucible encounters take you through memories; her later sacrifice at the End Church brings forth the Demon Father.",
       "image": "cathedral_battle.webp"
     },
     {
       "id": "jester",
       "npc": "NPC_StageJester1",
       "role": "THE OPERA HALL",
-      "intro": "The Jester stages eligible past quests as performances, with an audience that reacts.",
-      "detail": "The Opera Hall is behind the Changelings. Pell is not the King’s court jester. His invincibility does not establish a secret supernatural identity.",
+      "intro": "At the Opera Hall, your past adventures become performances—and the audience has opinions.",
+      "detail": "Behind the Changelings lies the Opera Hall, where Pell stages stories from quests you have completed. Return to see familiar events in a different light.",
       "image": "monster_dinner.webp"
     }
   ],
@@ -110,19 +110,19 @@
     {
       "id": "Holy",
       "line": "Restore. Protect. Bind.",
-      "description": "Healing, protection and Binding Light. Holy power can help others, but its name does not make its use harmless.",
+      "description": "Heal wounds, strengthen your defenses and hold enemies in place. Protect yourself—or support the people fighting beside you.",
       "image": "assets/insc-holy-bindinglight.jpg"
     },
     {
       "id": "Blood",
       "line": "Power has a price.",
-      "description": "Trade health, drain enemies and summon an ally. Blood magic can be used protectively—Lucan’s story makes that distinction matter.",
+      "description": "Turn your own health into power. Drain your enemies, move faster, summon a demon or protect yourself with a Blood Barrier.",
       "image": "assets/insc-blood-bloodrupture.jpg"
     },
     {
       "id": "Dark",
       "line": "Control the impossible.",
-      "description": "Concealment, fear, curses and the stillness of Void Stasis. Dark Ascension is a separate alternate Ultimate.",
+      "description": "Disappear, terrify your enemies and control the battlefield. Each cast brings you closer to lasting corruption.",
       "image": "assets/insc-dark-voidstasis.jpg"
     }
   ],
@@ -169,28 +169,36 @@
   ],
   "faq": [
     {
-      "q": "What kind of game is Eclipsed Realms?",
-      "a": "A dark fantasy action RPG combining physical combat, Relief magic, exploration, quests and personal consequences. The game is in development; this website describes its documented design and current project reference."
+      "q": "What is Eclipsed Realms?",
+      "a": "A dark fantasy action RPG about exploration, physical combat, powerful magic and personal choices. Travel through troubled communities, build relationships and decide where you stand."
     },
     {
-      "q": "Can we play together?",
-      "a": "The Development Bible records a campaign capacity of four humans across all machines, with up to two local players per machine. Its session reference covers LAN and direct-address connections. This is not a promise of matchmaking, cross-play or platform availability."
+      "q": "When can I play?",
+      "a": "Eclipsed Realms is in development. Release timing, supported platforms and where to buy the game have not been announced."
     },
     {
-      "q": "Do my friend’s choices become my choices?",
-      "a": "Your answers and personal consequences belong to your character. The host commits the shared physical scene. Those two records can differ. Loot is shared, and ordinary party protection prevents friendly damage; the finale has its own allegiance rules."
+      "q": "Can I play with friends?",
+      "a": "The campaign supports up to four players, with up to two local players on each machine. Join over a local network or with a direct address."
     },
     {
-      "q": "Do I have to visit training to unlock fast travel?",
-      "a": "No. The Bible’s Doll network offers personally discovered travel waypoints with valid arrival destinations. Prior training entry is not required. The Start House station has its own attic story gate."
+      "q": "Do we have to make the same choices?",
+      "a": "No. Your answers, relationships and personal consequences belong to your character. The host’s choices determine what physically happens in the shared world."
     },
     {
-      "q": "Are Holy and Blood simply good and evil?",
-      "a": "No. Garran’s history shows that Holy magic can cause harm, while Lucan uses Blood magic protectively. A school’s name does not decide a character’s morality."
+      "q": "Are Holy and Blood magic good and evil?",
+      "a": "A school of magic does not decide your morality. Holy magic can cause harm, and Blood magic can protect. Your actions tell your story."
     },
     {
-      "q": "Where can I buy or download the game?",
-      "a": "No release date, store listing, platform list or download is confirmed in the Development Bible used for this edition."
+      "q": "Will the guide spoil the story?",
+      "a": "The main site introduces the world without revealing its endings. Quest details, character secrets and ending explanations stay behind an optional spoiler switch on World & story."
+    },
+    {
+      "q": "Where should I start with the guide?",
+      "a": "Begin with How to play for combat, magic and exploration essentials. Use the Player guide when you want details on a particular spell, weapon, ability or game system."
+    },
+    {
+      "q": "Do I need to enter training to unlock fast travel?",
+      "a": "No. Discover a Doll travel destination during your journey to make it available. The station at the old house opens after its attic story encounter."
     }
   ],
   "decisions": [
