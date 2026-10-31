@@ -1,0 +1,265 @@
+{
+  "authority": "Eclipsed Realms · Development Bible",
+  "hero": {
+    "eyebrow": "A DARK FANTASY ACTION RPG",
+    "title": "The realm remembers.",
+    "description": "Dangerous magic. Uneasy loyalties. A world shaped by what you choose to do—and by those who survive to remember it.",
+    "intro": "You survived what should have killed you. Beneath an old house, a mysterious Doll offers a way forward. Beyond its walls lie frightened villages, a divided kingdom, and people whose faith can be as dangerous as the creatures in the dark."
+  },
+  "regions": [
+    {
+      "id": "awakening",
+      "name": "The awakening",
+      "place": "THE OLD HOUSE & START VILLAGE",
+      "image": "village_day.webp",
+      "description": "A cage beneath an old house. A voice with answers of her own. Your first steps lead through the attic and into a village gathering, where your response becomes part of your personal history.",
+      "source": "current-project.chapters.opening; current-project.quests.Q01/Q02/Q03"
+    },
+    {
+      "id": "thornhallow",
+      "name": "Thornhallow",
+      "place": "THE HIDDEN VILLAGE",
+      "image": "hidden_village.webp",
+      "description": "The Veyne daughters run the Hidden Village while their father, Garran, lives with the consequences of his past. Their community connects your journey to Lucan, their brother and the Kingdom’s Mage.",
+      "source": "CANON_Characters_User_2026-10-31.md: family addenda"
+    },
+    {
+      "id": "cairnhold",
+      "name": "Cairnhold",
+      "place": "THE KINGDOM",
+      "image": "city_night.webp",
+      "description": "Wealth and influence gather above; working people bear the weight of guards, taxes and curfews below. The Crown offers protection and harsh justice. Beneath its streets, the Thieves hold a society of their own.",
+      "source": "current-project.chapters.mage; character canon addendum 3"
+    },
+    {
+      "id": "cult",
+      "name": "The Cult’s domain",
+      "place": "CULT VILLAGE & SIXFOLD CRUCIBLE",
+      "image": "demon_arena.webp",
+      "description": "The Cult practises sacrifice and worships Dark magic. Its human followers do not all understand what their rituals serve. The Crucible is part of the story’s ordeal; it is distinct from the Doll’s Training Arena.",
+      "source": "character canon addenda 2–5; current-project.chapters.ordeal"
+    },
+    {
+      "id": "beyond",
+      "name": "Beyond the familiar",
+      "place": "IRON VOW HOLD & WITCH TERRITORIES",
+      "image": "ram_ruins.webp",
+      "description": "The Templars belong to Iron Vow Hold, a separate realm. The Plague Doctors belong to the Witch region. Neither group should be mistaken for a branch of the Kingdom’s royal forces.",
+      "source": "character canon addendum 4"
+    }
+  ],
+  "characters": [
+    {
+      "id": "doll",
+      "npc": "NPC_CursedDoll1",
+      "role": "A VOICE IN THE DARK",
+      "intro": "She offers guidance and useful services. That does not make her trustworthy.",
+      "detail": "The Hidden Village’s ancestors created her as a vessel for Dark magic. She developed a will of her own and manipulates others toward bloodshed and ritual. The Doll is the seal itself, not a guardian of a separate seal beneath the house.",
+      "image": "doll_close1.webp"
+    },
+    {
+      "id": "corven",
+      "npc": "NPC_MainPriest1",
+      "role": "FAITH & RESPONSIBILITY",
+      "intro": "A priest whose renewed conviction has consequences he does not fully understand.",
+      "detail": "The Doll guided Corven to the Relief and the Start Village. He believed killing fed his god and brought salvation. He intended to summon the Demon Father, but summoned the Nun. Manipulation does not erase his responsibility; neither does it mean he knowingly understood the whole scheme.",
+      "image": "ritual_chamber.webp"
+    },
+    {
+      "id": "garran",
+      "npc": "NPC_OldMan1",
+      "role": "THE HIDDEN VILLAGE",
+      "intro": "A Holy-magic teacher who has sworn off casting. He guides the player rather than performing the ritual himself.",
+      "detail": "Garran unintentionally harmed his wife with magic; she died, and he withdrew. His daughters took responsibility for the village. His connection to the Doll is ancestral: he did not personally create her.",
+      "image": "hidden_village.webp"
+    },
+    {
+      "id": "lucan",
+      "npc": "NPC_Mage1",
+      "role": "THE KINGDOM’S MAGE",
+      "intro": "Garran’s son and the daughters’ brother. A practitioner of Blood magic who protects the royal couple.",
+      "detail": "Lucan pursued mastery while wanting to use his power for good. He can become an ally against the Demon Father. On the Cult route he is the Kingdom’s final defender; his Blood shield carries him, the King and the Queen to safety.",
+      "image": "royalty.webp"
+    },
+    {
+      "id": "daughters",
+      "name": "The Veyne daughters",
+      "role": "LEADERS OF THORNHALLOW",
+      "intro": "Tressa and Nerys run the village. Each has her own relationship with you, and each makes her own choice about helping.",
+      "detail": "They are Garran’s daughters and Lucan’s sisters. Earning one sister’s support does not earn the other’s. Their established difference in manner remains; invented romance assignments are not canon.",
+      "image": "hidden_village.webp"
+    },
+    {
+      "id": "nun",
+      "name": "The Nun",
+      "role": "AN IMPOSSIBLE PRESENCE",
+      "intro": "The main Nun is the Witch Nun / Witch Priest. The City Nun is a separate person.",
+      "detail": "The attic and Cult Arena sequences are memory experiences. The main Nun summons the six Greater Flesh Demons; her later sacrifice manifests the separate Demon Father. Her earlier healer/plague origin is still unresolved, and no resurrection story is assumed.",
+      "image": "cathedral_battle.webp"
+    },
+    {
+      "id": "jester",
+      "npc": "NPC_StageJester1",
+      "role": "THE OPERA HALL",
+      "intro": "The Jester stages eligible past quests as performances, with an audience that reacts.",
+      "detail": "The Opera Hall is behind the Changelings. Pell is not the King’s court jester. His invincibility does not establish a secret supernatural identity.",
+      "image": "monster_dinner.webp"
+    }
+  ],
+  "schools": [
+    {
+      "id": "Holy",
+      "line": "Restore. Protect. Bind.",
+      "description": "Healing, protection and Binding Light. Holy power can help others, but its name does not make its use harmless.",
+      "image": "assets/insc-holy-bindinglight.jpg"
+    },
+    {
+      "id": "Blood",
+      "line": "Power has a price.",
+      "description": "Trade health, drain enemies and summon an ally. Blood magic can be used protectively—Lucan’s story makes that distinction matter.",
+      "image": "assets/insc-blood-bloodrupture.jpg"
+    },
+    {
+      "id": "Dark",
+      "line": "Control the impossible.",
+      "description": "Concealment, fear, curses and the stillness of Void Stasis. Dark Ascension is a separate alternate Ultimate.",
+      "image": "assets/insc-dark-voidstasis.jpg"
+    }
+  ],
+  "systems": [
+    "world.cursed-doll-network",
+    "world.training-arena",
+    "world.horse-riding",
+    "world.fog-of-war",
+    "world.locks-and-lockpicking",
+    "world.pickpocketing",
+    "world.ownable-pickups",
+    "world.day-night-and-world-rules",
+    "world.weather",
+    "world.torch",
+    "consequences.relationships",
+    "consequences.faction-reputation",
+    "consequences.karma",
+    "consequences.witness-evaluation",
+    "consequences.direct-witness-memory",
+    "consequences.npc-knowledge-ledger",
+    "consequences.stolen-goods-provenance",
+    "consequences.arrest-jail-custody",
+    "consequences.law-bribery",
+    "consequences.social-conversation-modules",
+    "progression.character-creator",
+    "progression.creator-personality-page",
+    "progression.personality-traits",
+    "progression.perks-speech",
+    "coop.campaign-admission",
+    "coop.couch-coop",
+    "coop.coop-saving",
+    "coop.personal-vs-world-flags",
+    "coop.per-player-quests",
+    "coop.lan-discovery",
+    "coop.join-game",
+    "coop.session-exit",
+    "coop.jester-coop-performance",
+    "coop.doll-network-coop",
+    "quests.jester-performances",
+    "quests.jester-playbill-and-stage",
+    "quests.risk-choices",
+    "quests.personal-quest-unlocks",
+    "quests.quest-autosave"
+  ],
+  "faq": [
+    {
+      "q": "What kind of game is Eclipsed Realms?",
+      "a": "A dark fantasy action RPG combining physical combat, Relief magic, exploration, quests and personal consequences. The game is in development; this website describes its documented design and current project reference."
+    },
+    {
+      "q": "Can we play together?",
+      "a": "The Development Bible records a campaign capacity of four humans across all machines, with up to two local players per machine. Its session reference covers LAN and direct-address connections. This is not a promise of matchmaking, cross-play or platform availability."
+    },
+    {
+      "q": "Do my friend’s choices become my choices?",
+      "a": "Your answers and personal consequences belong to your character. The host commits the shared physical scene. Those two records can differ. Loot is shared, and ordinary party protection prevents friendly damage; the finale has its own allegiance rules."
+    },
+    {
+      "q": "Do I have to visit training to unlock fast travel?",
+      "a": "No. The Bible’s Doll network offers personally discovered travel waypoints with valid arrival destinations. Prior training entry is not required. The Start House station has its own attic story gate."
+    },
+    {
+      "q": "Are Holy and Blood simply good and evil?",
+      "a": "No. Garran’s history shows that Holy magic can cause harm, while Lucan uses Blood magic protectively. A school’s name does not decide a character’s morality."
+    },
+    {
+      "q": "Where can I buy or download the game?",
+      "a": "No release date, store listing, platform list or download is confirmed in the Development Bible used for this edition."
+    }
+  ],
+  "decisions": [
+    {
+      "topic": "Source of truth",
+      "before": "The About page overrode the older sites.",
+      "now": "The Development Bible now takes precedence. Its current project snapshots, reviewed combat catalog and canon corrections override older Atlas introductions and all prior website text."
+    },
+    {
+      "topic": "Travel",
+      "before": "Entering Doll training was required to bind a destination.",
+      "now": "Personally discovered travel waypoints with valid arrival anchors are destinations. Prior training entry is not required; the attic station retains a story gate."
+    },
+    {
+      "topic": "Co-op",
+      "before": "Four-player and 2 + 2 configurations were treated only as old targets.",
+      "now": "The Bible records capacity for four humans and two local players per machine. Connection-method and validation limits remain explicit."
+    },
+    {
+      "topic": "Alignment and endings",
+      "before": "An explicit host choice at the altar selected the ending.",
+      "now": "The current Bible uses A1–A5 Good/Evil answer counts after six distinct demons; ties use creator inclination or a saved Unwritten result. Final-battle switching and four outcomes are documented. An opposing guest win does not complete the host campaign."
+    },
+    {
+      "topic": "Quest names",
+      "before": "Older first-pass quest names appeared as current.",
+      "now": "Quest titles come directly from current-project.json, including What the Dead Remember, The First Death, Six Graves Open, When the Seal Weeps and The Crown Must Fall. Stable quest IDs are preserved."
+    },
+    {
+      "topic": "Personality",
+      "before": "Cruel / Cunning / Compassionate conflicted with Witty / Empathetic / Bold.",
+      "now": "The current creator and personality reference uses Witty, Empathetic and Bold. These are distinct from Good/Evil moral answers and creator inclination."
+    },
+    {
+      "topic": "Magic and weapon moves",
+      "before": "Old spell rosters, 5 + Ultimate wording and technique classifications varied.",
+      "now": "The Bible’s reviewed Combat catalog supplies the roster and descriptions. Gutter Cut and Repelling Blow are alternate physical Ultimates. Void Stasis is the default Dark Ultimate; Dark Ascension is an alternate. Removed Dark Continuance is not offered."
+    },
+    {
+      "topic": "Doll and Corven",
+      "before": "Older lore left their identities unresolved or supplied incompatible interpretations.",
+      "now": "The canon records the Doll as the Dark vessel and seal itself, manipulating Corven. His sincere but mistaken religious interpretation is distinct from the underlying truth. These revelations are spoiler-gated."
+    },
+    {
+      "topic": "The Nun and six demons",
+      "before": "Witch Priest / Nun identity and Flesh Demon classification remained unresolved.",
+      "now": "The main Nun is the Witch Nun / Witch Priest; the City Nun is separate. The six are Greater Flesh Demons. Attic and Arena sequences are memories. The reservoir explanation and healer/plague origin remain unresolved."
+    },
+    {
+      "topic": "Geography",
+      "before": "The old region labels conflated religious territories and the Kingdom.",
+      "now": "Templars belong to Iron Vow Hold, a separate realm. Plague Doctors belong to Witch Area 2. The Opera Hall is behind the Changelings, not the Kingdom."
+    },
+    {
+      "topic": "The Veyne family and royalty",
+      "before": "The earlier pages supplied incomplete family and ending summaries.",
+      "now": "Garran guides and does not cast; the daughters run the Hidden Village. Lucan protects the King and Queen and escapes with them when the Kingdom falls. Unapproved romances and invented family disputes are excluded."
+    },
+    {
+      "topic": "Historical material",
+      "before": "A searchable archive presented 98 entries from the retired sites alongside current information.",
+      "now": "The old archive is replaced by a Bible-derived player guide and current quest index. The complete pre-overhaul site remains in a local backup; unsupported Chapter II geography, older numbers and invented lore are not carried forward as current facts."
+    }
+  ],
+  "unresolved": [
+    "The Nun’s earlier healer/plague origin and altered state between life and death require confirmation.",
+    "The exact relationship between the six Greater Flesh Demons and the Demon Father remains unresolved; the older energy-reservoir account is not established canon.",
+    "The Atlas comparison records residual older altar-commit code. Source presence does not prove which route is wired in every level.",
+    "The Bible distinguishes authored design, inspected source and runtime evidence. Website verification is not a new Unreal gameplay test.",
+    "The Nun’s intended Arena story summons all six demons; the inspected setup helper makes her leave after the first. Current placed assets and runtime playback remain unverified."
+  ]
+}
