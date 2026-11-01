@@ -1,6 +1,6 @@
 {
-  "reviewedAt": "2026-10-31T21:24:23.528Z",
-  "digest": "75e7248971e01f478da905e6f2a16a44cd9769fda26e987c704e36e93edd787e",
+  "reviewedAt": "2026-11-01T17:35:52.608Z",
+  "digest": "7e6cf621112eb0934ae15260dd812fde3d6a2aa8b457898e02e486ffd2c9e576",
   "sources": {
     "Atlas/data/SCHEMA.md": "33b8cf552a3a676351d21e1540bcafa61a9dab034e2291fbbbdb448acfc2082f",
     "Atlas/data/categories.js": "7628e5a5488fd65a486219fea033aafd6a8bee55343ad34d0a31a16ca8a88d9a",
@@ -23,7 +23,7 @@
     "Atlas/data/glossary.js": "ae17c87b3d654a39009bbce9a18781ada5193a07421f2c04def4f331ba5406a9",
     "Atlas/data/imported-v2.js": "8c35f8f37da4b6190b30ebb20bd4ef7a986992579af2d390993307e2b369c4e3",
     "Atlas/data/media.js": "99d443302d32522ad9c4708c895ac69f2a7629a2cef8501a5272a9ddc8be9867",
-    "Atlas/data/meta.js": "43afbd17f329fbec207f12ecace9a1d47ba11028fec6919597aadd09a0c0963b",
+    "Atlas/data/meta.js": "b817bb1cd898330e4f35d5285d3eb0675194a91d2b249bff5bce6d17edfc0047",
     "Atlas/data/project-comparison.js": "db736deddec60878c951d615ef8e99be97ad3a0ee277b150f515d0cdadabdd83",
     "Atlas/data/reader.js": "b41aa2d8463de999658d8e79aebf99d5fe0ca4265b62497d914e6ff0da280eeb",
     "Atlas/data/saved-file-index.js": "0d306d130edf39e658c676533c1dc36e370df130a502e6c6c8e2a1d4c5cb7352",

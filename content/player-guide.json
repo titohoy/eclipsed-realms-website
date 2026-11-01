@@ -3538,9 +3538,9 @@
   {
     "id": "arena-rules",
     "title": "Enter the Arena",
-    "summary": "Fight team-elimination rounds with a fresh random loadout every time.",
+    "summary": "Fight team-elimination rounds with temporary high-level builds.",
     "body": [
-      "Arena fighters use temporary level-100 builds with all skills maximized. Every round gives you a new random loadout.",
+      "Arena fighters use temporary level-100 builds with all skills maximized. In random-loadout matches, each round gives you a new random loadout.",
       "Only opposing teams can damage each other during an active round. Preparation and countdown are protected. There is no respawn during a round; elimination or staying out of bounds too long removes you.",
       "Rounds last up to three minutes. Multiplayer is first to three wins; solo is first to two. A timeout or simultaneous elimination draws the round without awarding a point.",
       "Arena battles do not change campaign XP, Karma, crime, reputation or memories, and food and water do not drain."
@@ -3559,8 +3559,8 @@
         "value": "3 seconds"
       },
       {
-        "label": "Loadout",
-        "value": "Randomized each round"
+        "label": "Random-loadout matches",
+        "value": "Fresh equipment each round"
       }
     ],
     "category": "coop",
@@ -3572,7 +3572,7 @@
       "coop.arena-campaign-isolation"
     ],
     "publish": true,
-    "rationale": "Player-facing explanation of the reviewed gameplay; implementation and provenance omitted.",
+    "rationale": "The reviewed combat catalog establishes temporary level-100 builds and randomized rounds. The 2026-11-01 Atlas meta pendingSync adds a separate custom-loadout mode and arena economy, explicitly IMPLEMENTED / UNBUILT / UNRUN. Scope randomization to random-loadout matches instead of all Arena play; do not advertise custom matches, points, prices, shops, stash persistence or inventory locks until confirmed. No combat source entry changed, so its reviewed fingerprint remains intact.",
     "sourceFingerprint": "0f4605d0525b559b732c6a5f4bf4acad2d30d1d59cdb63a7c65d6d946c32779f"
   },
   {
