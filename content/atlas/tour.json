@@ -1,0 +1,86 @@
+[
+  {
+    "id": "prologue",
+    "short": "The realm",
+    "kicker": "An illustrated journey",
+    "head": "Eclipsed",
+    "accent": "Realms",
+    "location": "The open world",
+    "body": "A dark fantasy role-playing game. You wake in a cage beneath an old house. The first voice you hear belongs to a doll.",
+    "aside": "Scroll to follow the stranger from the house into the realm.",
+    "anchor": "overview",
+    "zoom": 1.05
+  },
+  {
+    "id": "awakening",
+    "short": "The voice",
+    "kicker": "I  /  The awakening",
+    "head": "A voice in",
+    "accent": "the dark.",
+    "location": "Beneath the Shuttered House",
+    "body": "There’s a doll beside your cage. She speaks as though she’s been expecting you. For now, she knows something you need: a way out.",
+    "aside": "Follow her voice. Find the stairs. Step into daylight.",
+    "anchor": "cage",
+    "zoom": 4.4
+  },
+  {
+    "id": "square",
+    "short": "The crowd",
+    "kicker": "II  /  Harrowwick",
+    "head": "The square",
+    "accent": "falls silent.",
+    "location": "The gallows at Harrowwick",
+    "body": "In the village square, two people face the gallows for sheltering a woman who fled the church. A crowd has gathered. Will you speak against the hanging, or cheer with them?",
+    "aside": "Even here, among strangers, what you say matters.",
+    "anchor": "gallows",
+    "zoom": 4.2
+  },
+  {
+    "id": "refuge",
+    "short": "The gate",
+    "kicker": "III  /  Thornhallow",
+    "head": "Someone",
+    "accent": "needs shelter.",
+    "location": "Thornhallow",
+    "body": "Farther on, the Veyne sisters lead a hidden village. A wounded deserter begs for shelter. His pursuers want him back. This time the question is who you’ll stand beside.",
+    "aside": "You build trust one person at a time.",
+    "anchor": "thornhallow",
+    "zoom": 3.9
+  },
+  {
+    "id": "encounter",
+    "short": "The encounter",
+    "kicker": "IV  /  A moment on the road",
+    "head": "When words",
+    "accent": "run out.",
+    "location": "Veilcross · an illustrated encounter",
+    "body": "Picture an enemy closing the distance. Raise a shield at the right moment and you can stagger them. Or set down a carved board called a Relief, step within its reach, and cast a spell.",
+    "aside": "Try the encounter:",
+    "anchor": "veilcross",
+    "zoom": 4.25
+  },
+  {
+    "id": "kingdom",
+    "short": "The city",
+    "kicker": "V  /  Cairnhold",
+    "head": "Beyond the",
+    "accent": "city walls.",
+    "location": "Cairnhold",
+    "body": "The road reaches the Kingdom’s capital. The Crown rules above; the Thieves have their own society below. A title might open a door, but it won’t tell you whom to trust.",
+    "aside": "There are other roads: to the Templars of Iron Vow Hold, or east into the Cult’s village of Vesper Hollow.",
+    "anchor": "cairnhold",
+    "zoom": 3.65
+  },
+  {
+    "id": "horizon",
+    "short": "Your journey",
+    "kicker": "Epilogue  /  The open world",
+    "head": "Who will walk",
+    "accent": "beside you?",
+    "location": "Across the realm",
+    "body": "Go alone, or bring friends. Up to four people can share a campaign. You travel through the same world, but the answers you give and the relationships you build are your own.",
+    "aside": "The rest is yours to discover.",
+    "anchor": "overview",
+    "zoom": 1.05
+  }
+]

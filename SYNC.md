@@ -22,6 +22,12 @@ Precedence inside the Bible matters: current project snapshots and the latest ch
 8. Publish to the existing owner-private Site. Reconcile an existing pending deployment before retrying; do not create another Site. Honor any runtime/automatic approval restrictions. A blocked push or failed deployment is not a completed sync.
 9. After native deployment success, save `../official-site-sync-state.json` with the published Bible digest, website commit, version/deployment IDs, URL and timestamp. Then report only a material update, failure or decision needed.
 
+## The illustrated journey and travel map
+
+On every check, the combined digest also covers the reviewed world survey. If `mapFilesNeedingReview` contains any path, inspect the changed project evidence against `content/atlas/watched-inputs.json`, `terrain.json` and `places.json`. Re-extract or reposition affected illustrations only after verification, then update that inventory deliberately. Never clear a mismatch by replacing a hash without inspecting its evidence. Keep source paths, development markers and the elevated arena out of the surface map. The camera uses the five reviewed story anchors; the opening cage and gallows are separate from their regional travel pins. Actors and close-up environments are illustrative staging, not spawn claims. Review seven newcomer story chapters in `content/atlas/tour.json`, camera choreography and encounter interactions when the underlying Bible changes. Verify the 3D scenes, still mode, 2D fallback, independent map and mobile layout. The website never writes back to a game file.
+
+The unmodified full-height export is kept outside the hosted files. `scripts/derive-world.py <reviewed-height16.png>` recreates the sampled 3D terrain and surveyed forest from reviewed inputs; the engraved map is independently validated against the private manifest. Only geometry, art and player copy belong in dist.
+
 ## Scope
 
 The public website serves prospective buyers and existing players. Its five pages are Discover, World & story, How to play, Player guide and Game information. Keep visitor copy inviting, practical and easy to navigate. Do not add development rhetoric, comparison pages, source citations, validation badges, internal IDs in displayed copy, or unresolved design debates. Do not invent release dates, store links, platforms, reviews, purchase buttons or unsupported mechanics. Story revelations and quest outcomes remain behind an opt-in spoiler switch. Concept art is labelled.

@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import vm from 'node:vm';
+import {checkMap} from './map-review.mjs';
 import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const project=process.env.ECLIPSED_BIBLE_PROJECT || 'D:/Unreal Projects/EclipsedRealms';
@@ -15,14 +16,16 @@ walk(web);walk(path.join(project,'Atlas/data'));
 // Watcher clock ticks are health, not content changes. Read them independently.
 const health=json(path.join(web,'source-status.json'));
 const live=json(path.join(web,'live-sync.json'));
-const healthy=health.status==='matched'&&!live.lastError;
+const survey=checkMap(project,root);
+const healthy=health.status==='matched'&&!live.lastError&&!survey.mismatches.length;
 const contentFiles=files.filter(p=>!['live-sync.json','source-status.json'].includes(path.basename(p)));
 const sources=Object.fromEntries([...new Set(contentFiles)].sort().map(p=>[path.relative(project,p).replaceAll('\\','/'),hash(read(p))]));
+sources['reviewed-open-world-cartography']=survey.digest;
 const digest=hash(JSON.stringify(sources));
 const baseline=path.join(root,'content/reviewed-bible.json');
 const prev=fs.existsSync(baseline)?json(baseline):{sources:{}};
 const changed=[...new Set([...Object.keys(sources),...Object.keys(prev.sources)])].filter(k=>sources[k]!==prev.sources[k]);
-if(process.argv.includes('--check')){console.log(JSON.stringify({changed:changed.length>0,digest,files:changed,sourceHealthy:healthy,sourceStatus:health.status,sourceError:live.lastError},null,2));process.exit(0);}
+if(process.argv.includes('--check')){console.log(JSON.stringify({changed:changed.length>0,digest,files:changed,sourceHealthy:healthy,sourceStatus:health.status,sourceError:live.lastError,mapDigest:survey.digest,mapFilesNeedingReview:survey.mismatches},null,2));process.exit(0);}
 if(!healthy)throw Error('Bible snapshot is stale or its watcher reports an error. Preserve the published edition until the Bible is current.');
 if(changed.length&&!process.argv.includes('--accept-reviewed'))throw Error('Bible changed. Review changed sources and editorial.json before building with --accept-reviewed. Run --check for the exact files.');
 const registry={};const context=vm.createContext({ATLAS:{register:(id,data)=>registry[id]=data}});

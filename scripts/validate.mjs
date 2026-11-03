@@ -8,6 +8,10 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),dist=
 const json=p=>JSON.parse(fs.readFileSync(path.join(root,p),'utf8').replace(/^\uFEFF/,''));
 const data=json('dist/game-data.json'),snapshot=json('content/source-snapshot.json'),curation=json('content/player-guide.json'),review=json('content/reviewed-bible.json'),sync=json('content/sync-status.json');
 const hash=s=>crypto.createHash('sha256').update(s).digest('hex');
+const {validateMap}=await import('./map-review.mjs');validateMap(root);
+const surveyAssets={'relief.bin':'8ff1949660e3687cf2b9fdccdca65163f2707b8f34663d26e5dd5e7f2ea5f719','groves.bin':'c842e8ba297e488620c6e4d86fa2a15c6bead085b786f05326b39a112a351b36'};
+for(const [name,sha] of Object.entries(surveyAssets))assert.equal(hash(fs.readFileSync(path.join(dist,'assets/cartography',name))),sha,'3D terrain/forest needs review: '+name);
+for(const f of ['world-flight.js','journey.js','scene-sound.js','assets/cartography/players.js','assets/cartography/stages.js','assets/cartography/engine/three.module.min.js','assets/cartography/engine/three.core.min.js'])assert(fs.statSync(path.join(dist,f)).size>0,'Missing immersive scene asset: '+f);
 const current=JSON.parse(execFileSync(process.execPath,[path.join(root,'scripts/sync-bible.mjs'),'--check'],{encoding:'utf8'}));
 assert(current.sourceHealthy,'Bible is unhealthy');assert(!current.changed,'Bible changed since review');assert.equal(current.digest,review.digest);assert.equal(snapshot.sourceDigest,review.digest);assert.equal(sync.sourceDigest,review.digest);
 assert.equal(curation.length,snapshot.entries.length);assert.equal(new Set(curation.map(e=>e.id)).size,curation.length);

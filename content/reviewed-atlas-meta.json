@@ -1,7 +1,7 @@
 {
   "source": "Atlas/data/meta.js",
-  "reviewedAt": "2026-11-01T17:35:52.106Z",
-  "sourceHash": "b817bb1cd898330e4f35d5285d3eb0675194a91d2b249bff5bce6d17edfc0047",
+  "reviewedAt": "2026-11-03T01:44:05.837Z",
+  "sourceHash": "dc5244e3fc75e0bb8209fb8d892986b24a94c57584c90eed3ef7d7bbadeca8fb",
   "data": {
     "meta": {
       "title": "Eclipsed Realms Design Atlas",
@@ -16,6 +16,9 @@
         "Pro (other computer)": "A separate Narrative Pro testbed on another computer. Not visible from this workspace: never checked by this atlas."
       },
       "pendingSync": [
+        {
+          "text": "2026-11-02 T157 Social & Codex pages (ui.social-codex entry): IMPLEMENTED / UNBUILT / UNRUN. Factions & Karma and Personality are now two purpose-built pages (UI/EclipsedSocialPages.h/.cpp: UEclipsedFactionsPage = Karma gauge with the seven tiers + marker + the real effects (Holy healing +25 percent from karma 25, +50 from 50; reactions scale by karma), a grid of faction cards (met = real reputation tier + standing bar, known unmet = Not yet met), details panel + notices (known ties, warnings); UEclipsedPersonalityPage = tri-axis chart (Bold/Witty/Empathetic, polygon + lean marker), temperament title (Unformed when empty), trait cards, how it grows). Each has its own full-width pane in UEclipsedSocialTabContent (FactionsPane 5, PersonalityPane 6); the shared list/details panes no longer serve those two sections. Proof: -EclipsedMenuTemplateProof=socialpages. Not yet synced into Atlas/data/*.js."
+        },
         {
           "text": "2026-11-01 arena economy (arena entries): IMPLEMENTED / UNBUILT / UNRUN. Two hub block sets (RANDOM-loadout = existing 1v1-4v4, CUSTOM-loadout = new set, ?EclipsedCustom=1); arena points 10 per round won, max 30 per player per match, idempotent per match+round (UEclipsedArenaEconomySubsystem, own SaveGame slot EclipsedArena_<identity>, never campaign currency/gear); Arena Attendant shop = every pool armor piece + player weapon at 50 points, server-validated (Link ServerBuyItem); bought gear is the arena stash applied at join, kept as-is in custom matches; inventory + loot locked server-side in match levels (EnforceInventoryLock); hub supply chests removed; attendant dialogue: manage loadout / buy equipment / buy weapons / explanations + arena-only tutorial quest QBP_ArenaTutorial. Files Source/EclipsedRealms/Arena/EclipsedArenaEconomy.*, EclipsedArenaShop.*, EclipsedArenaAttendantEvent.*. Not yet synced into Atlas/data/*.js."
         },

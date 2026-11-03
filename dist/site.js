@@ -5,10 +5,6 @@ menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation');$('#main-nav').classList.remove('open');}});
 const titles={weapons:'Weapons & techniques',reliefs:'Magic & spells',rules:'Combat essentials',equipment:'Armor & equipment',progression:'Your character',statuses:'Survival & recovery',world:'Exploration & travel',society:'Choices & consequences',coop:'Playing together',enemies:'Creatures & companions'};
 const entryLink=e=>`<a href="guide.html?entry=${encodeURIComponent(e.id)}" data-entry="${esc(e.id)}">${esc(e.title)} <span aria-hidden="true">↗</span></a>`;
-function home(D){
- const activate=(id,focus=false)=>{const s=D.schools.find(s=>s.id===id);if(!s)return;$$('[data-school]').forEach(b=>{const selected=b.dataset.school===id;b.setAttribute('aria-selected',selected);b.tabIndex=selected?0:-1;if(selected&&focus)b.focus();});const panel=$('#school-panel');panel.setAttribute('aria-labelledby','tab-'+id);panel.innerHTML=`<div class="school-layout"><div class="school-art"><img src="${esc(s.image)}" alt="${esc(id)} Relief artwork"><span class="art-label">Relief artwork</span></div><div><p class="eyebrow">${id} MAGIC</p><h3>${esc(s.line)}</h3><p>${esc(s.description)}</p><div class="spell-links">${D.entries.filter(e=>e.school===id).map(entryLink).join('')}</div><a class="button secondary" href="guide.html?school=${id}">Explore ${id} magic <span aria-hidden="true">↗</span></a></div></div>`;};
- $$('[data-school]').forEach((b,i)=>{b.addEventListener('click',()=>activate(b.dataset.school));b.addEventListener('keydown',e=>{let j=i;if(e.key==='ArrowRight')j=(i+1)%3;else if(e.key==='ArrowLeft')j=(i+2)%3;else if(e.key==='Home')j=0;else if(e.key==='End')j=2;else return;e.preventDefault();activate(D.schools[j].id,true);});});
-}
 function guide(D){
  const content=$('#guide-content'),search=$('#guide-search'),clear=$('#clear-search');let limit=24,lastQuery='';
  const nav=(url,scroll=true)=>{history.pushState({},'',url);limit=24;render();if(scroll){content.scrollIntoView({block:'start'});content.setAttribute('tabindex','-1');content.focus({preventScroll:true});}};
@@ -48,4 +44,4 @@ function story(D){
  $('#quest-search').addEventListener('input',e=>{const words=e.target.value.toLowerCase().split(/\s+/).filter(Boolean);let n=0;$$('[data-quest]').forEach(d=>{const match=words.every(w=>d.textContent.toLowerCase().includes(w));d.hidden=!match;if(match)n++;});$('#quest-count').textContent=n+' '+(n===1?'quest':'quests');$('#quest-empty').hidden=n!==0;});
 }
 const view=document.body.dataset.view;
-if(['home','guide','story'].includes(view))fetch('game-data.json').then(r=>{if(!r.ok)throw Error('Unable to load');return r.json();}).then(D=>({home,guide,story}[view])(D)).catch(()=>{if(view==='guide')$('#guide-content').innerHTML='<p class="callout">The guide could not load. Please refresh the page and try again.</p>';});
+if(['guide','story'].includes(view))fetch('game-data.json').then(r=>{if(!r.ok)throw Error('Unable to load');return r.json();}).then(D=>({guide,story}[view])(D)).catch(()=>{if(view==='guide')$('#guide-content').innerHTML='<p class="callout">The guide could not load. Please refresh the page and try again.</p>';});

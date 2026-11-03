@@ -1,6 +1,6 @@
 {
-  "reviewedAt": "2026-11-01T17:35:52.608Z",
-  "digest": "7e6cf621112eb0934ae15260dd812fde3d6a2aa8b457898e02e486ffd2c9e576",
+  "reviewedAt": "2026-11-03T01:57:18.380Z",
+  "digest": "7aa69aa85286f29ee5f1190bc331378388894e0838612b27f9ead219d422359e",
   "sources": {
     "Atlas/data/SCHEMA.md": "33b8cf552a3a676351d21e1540bcafa61a9dab034e2291fbbbdb448acfc2082f",
     "Atlas/data/categories.js": "7628e5a5488fd65a486219fea033aafd6a8bee55343ad34d0a31a16ca8a88d9a",
@@ -23,7 +23,7 @@
     "Atlas/data/glossary.js": "ae17c87b3d654a39009bbce9a18781ada5193a07421f2c04def4f331ba5406a9",
     "Atlas/data/imported-v2.js": "8c35f8f37da4b6190b30ebb20bd4ef7a986992579af2d390993307e2b369c4e3",
     "Atlas/data/media.js": "99d443302d32522ad9c4708c895ac69f2a7629a2cef8501a5272a9ddc8be9867",
-    "Atlas/data/meta.js": "b817bb1cd898330e4f35d5285d3eb0675194a91d2b249bff5bce6d17edfc0047",
+    "Atlas/data/meta.js": "dc5244e3fc75e0bb8209fb8d892986b24a94c57584c90eed3ef7d7bbadeca8fb",
     "Atlas/data/project-comparison.js": "db736deddec60878c951d615ef8e99be97ad3a0ee277b150f515d0cdadabdd83",
     "Atlas/data/reader.js": "b41aa2d8463de999658d8e79aebf99d5fe0ca4265b62497d914e6ff0da280eeb",
     "Atlas/data/saved-file-index.js": "0d306d130edf39e658c676533c1dc36e370df130a502e6c6c8e2a1d4c5cb7352",
@@ -67,6 +67,7 @@
     "Docs/NarrativeReview/web/storyboard.css": "683d6286f1730dfabd6d57f926483e829ad0fb229948d3a67ed4104b86200300",
     "Docs/NarrativeReview/web/storyboard.mjs": "1a34f63f746ba33988f5e4f14cbdd7a3599e0c6edd8768c759d2d274eb9e7572",
     "Docs/NarrativeReview/web/style.css": "5794c04a2b7c3e5c5dfe882c0dbb3a819c4dc57d47b18d590eca2c1c11492c68",
-    "Docs/NarrativeReview/web/workbench.html": "608cf1768adc95f0211ae4b8ecb3c9057916510230456415a65a466b4f0000f3"
+    "Docs/NarrativeReview/web/workbench.html": "608cf1768adc95f0211ae4b8ecb3c9057916510230456415a65a466b4f0000f3",
+    "reviewed-open-world-cartography": "e030362c620f5ea1c5e15a0a283f4dc1a08595c3aa476ec9c2ef45070fd2dd63"
   }
 }

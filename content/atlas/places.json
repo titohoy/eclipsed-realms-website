@@ -1,0 +1,1062 @@
+{
+  "schema": 1,
+  "verifiedWorld": "2026-11-02",
+  "sourceProject": "D:/Unreal Projects/EclipsedRealms/",
+  "map": "/Game/Maps/L_EclipsedRealms_OpenWorldMap",
+  "coordinateSystem": {
+    "units": "Unreal centimetres",
+    "worldSpace": "Effective open-world POILocation, corroborated in current separate POI packages. Do not apply a second level-instance/streaming transform. Descriptor bounds centers and local component/seat offsets are not pin locations.",
+    "surfaceRegistration": {
+      "source": "Saved/EnvironmentReview/Implementation/t141/grid_meta.json",
+      "worldMin": [
+        -201600,
+        -201600
+      ],
+      "worldMax": [
+        201600,
+        201600
+      ],
+      "u": "(X+201600)/403200",
+      "v": "(Y+201600)/403200",
+      "axes": "+X right, +Y down on Landscape2 terrain source. For a cropped/padded rendered image apply its matching crop/viewport after this transform."
+    },
+    "otherMapBounds": "Saved/EclipsedAudit/tiles_dump.txt describes a different 12x12 Narrative in-game map texture, width 322694.84375 cm; do not use its UV for the full Landscape2 terrain image."
+  },
+  "evidence": {
+    "poiCatalog": "Saved/EclipsedAudit/pois.txt, exported from open-world MapTileBounds.POIs[].POILocation in Saved/EclipsedAudit/dump_pois.py (2026-10-04).",
+    "currentAssetCheck": "Located the 26 exact open-world actor packages from Saved/EclipsedAudit/RegionActors_StoryInventory.txt. In each current package matched exactly one catalog XYZ triple (little-endian float64 coordinates within 0.00001 cm), its current display name, and one corresponding POI gameplay tag. Package hashes, vector file offsets and catalog line supplied per marker. This cross-check uses the catalog export as the authority for what the three numbers represent, not guessed binary offsets.",
+    "names": "Docs/Authoring/Naming/Names_2026-10-23.json:pois maps old to current; Saved/EclipsedAudit/Naming_Apply.txt lists the 26 resulting in-game labels. In particular the OLD City Wall/Templar Kingdom/Abandoned Church/Graveyard map entries are NOW Cairnhold/Iron Vow Hold/Briar Chapel/Chapel of the Forgotten despite residual display-name-table prose.",
+    "dollLink": "Source/EclipsedRealmsEditor/NarrativeCreators/Tests/EclipsedDollNetworkTools.cpp:Links() establishes POI-station membership in this open world. All 21 observed station actor origins (20 regional + separate Training Arena) are exported by Saved/EclipsedAudit/doll_safety_audit.txt/.py from loaded actors via get_actor_location() and confirmed in their current external actor packages. These are not player arrival seat transforms. Templar seat relocation does not move its POI.",
+    "scope": "No editor was started and no game file was edited. Actor-package and source check, not a new playtest; not proof every player has unlocked each destination."
+  },
+  "excluded": [
+    "Five Dev animal markers (existing in catalog but not travel).",
+    "The Pale Ring, a special elevated training destination in the open-world level, not a terrain waypoint.",
+    "Ancient Village prepared profile: no regional POI or station in the 26/21 placed inventories.",
+    "All DevMaps, test stations, gameplay test spawn offsets, and unplaced profiles."
+  ],
+  "surfaceWaypoints": [
+    {
+      "id": "Forest.Church1",
+      "name": "Briar Chapel",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        29618,
+        -14390,
+        -871
+      ],
+      "terrainUV": [
+        0.5734573413,
+        0.4643105159
+      ],
+      "legacyLabel": "Abandoned Church",
+      "actorLabel": "POIActor_ForestChurch1",
+      "poiTag": "Narrative.POIs.Eclipsed.Forest.Church1",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/0/86/40KJRDOBE4NHEBP7G1NSWN.uasset",
+      "packageSHA256": "44f664c013042f41cf30a11d4dad2b418206413c59e8d6fcaf7aff548bc57d39",
+      "catalogLine": 12,
+      "assetLocatorLine": 19,
+      "currentAssetVectorOffset": 5874,
+      "station": {
+        "name": "DollStation_ForestChurch1",
+        "worldCm": [
+          29461.000004,
+          -14337.000011,
+          -953
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/3/4R/PEKRN0VIENVJZANDUFFORT.uasset",
+        "packageSHA256": "af87c2a193afcf6b90e9731d6f2f3973ffdd3ed606adaf397160afba2b478965",
+        "auditLine": 137,
+        "currentAssetVectorOffset": 7453
+      }
+    },
+    {
+      "id": "StartHouse",
+      "name": "The Shuttered House",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        33461,
+        -100305,
+        2486
+      ],
+      "terrainUV": [
+        0.5829885913,
+        0.2512276786
+      ],
+      "legacyLabel": "Start House",
+      "actorLabel": "POIActor_StartHouse",
+      "poiTag": "Narrative.POIs.Eclipsed.StartHouse",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/2/CI/GWT1HM6B9L8GUWEP6HFJE3.uasset",
+      "packageSHA256": "d08a1c99dac9fea998171209eb59fbfd54cadf7806baed1bb69d700a739b1074",
+      "catalogLine": 19,
+      "assetLocatorLine": 201,
+      "currentAssetVectorOffset": 8255,
+      "station": {
+        "name": "DollStation_StartHouse",
+        "worldCm": [
+          33199.144464,
+          -100472.260607,
+          2454
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/E/23/PCLIYZDNT25HL8230PIJC4.uasset",
+        "packageSHA256": "01228721f57ef55e390ac4650b1aac3232b2da353be4a2c8cd7fa6353ec057ea",
+        "auditLine": 639,
+        "currentAssetVectorOffset": 7568
+      }
+    },
+    {
+      "id": "EndChurch",
+      "name": "Church of the Last Vigil",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        35156,
+        -114236,
+        413
+      ],
+      "terrainUV": [
+        0.5871924603,
+        0.2166765873
+      ],
+      "legacyLabel": "End Church",
+      "actorLabel": "POIActor_EndChurch",
+      "poiTag": "Narrative.POIs.Eclipsed.EndChurch",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/3/68/1VUITKXZN8F02XYS17UTKG.uasset",
+      "packageSHA256": "6e658a522bddb9d660971cb21dcabc0aaa0d699c1b2489a8fd62443708cc6a45",
+      "catalogLine": 6,
+      "assetLocatorLine": 267,
+      "currentAssetVectorOffset": 8301,
+      "station": {
+        "name": "DollStation_EndChurch",
+        "worldCm": [
+          35159.999998,
+          -114332.000002,
+          324
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/C/Q1/97M5D9G8G8ZB463QAWKTA3.uasset",
+        "packageSHA256": "702d4d42016d313fba0c69802320b036bee11523645c83857df0c3a5d703b459",
+        "auditLine": 569,
+        "currentAssetVectorOffset": 7621
+      }
+    },
+    {
+      "id": "Ossuary",
+      "name": "The Bonewarren",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        37679,
+        -95853,
+        -2288
+      ],
+      "terrainUV": [
+        0.5934499008,
+        0.2622693452
+      ],
+      "legacyLabel": "Ossuary",
+      "actorLabel": "POIActor_Ossuary",
+      "poiTag": "Narrative.POIs.Eclipsed.Ossuary",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/3/8J/BAUGJ3K64JKUU6TBEDDCEL.uasset",
+      "packageSHA256": "eaf3b68e48eb7d5530e8f8831ec7356522472465f7f63c45d50854daa7c0546e",
+      "catalogLine": 7,
+      "assetLocatorLine": 270,
+      "currentAssetVectorOffset": 8267,
+      "station": {
+        "name": "DollStation_Ossuary",
+        "worldCm": [
+          37916,
+          -96431,
+          -2219
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/9/7X/8RGG9OSCINH80A5WL9Q263.uasset",
+        "packageSHA256": "5f0449047b7c02a7d368c168342f4deca39a0ecddbeecd42c56679406d107d17",
+        "auditLine": 352,
+        "currentAssetVectorOffset": 7682
+      }
+    },
+    {
+      "id": "WitchArea2",
+      "name": "Mourngate",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        103829,
+        -57263,
+        5627
+      ],
+      "terrainUV": [
+        0.7575124008,
+        0.3579786706
+      ],
+      "legacyLabel": "Witch Area 2",
+      "actorLabel": "POIActor_WitchArea2",
+      "poiTag": "Narrative.POIs.Eclipsed.WitchArea2",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/3/T0/HEGHPJRWMH0YWODK5WOQ8R.uasset",
+      "packageSHA256": "499d7b0760d72f2c5fe81dec958f952c468d8d285ee631c9d6f2d028efb6bdbf",
+      "catalogLine": 25,
+      "assetLocatorLine": 316,
+      "currentAssetVectorOffset": 8276,
+      "station": {
+        "name": "DollStation_WitchArea2",
+        "worldCm": [
+          103682,
+          -57281,
+          5813
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/D/JQ/U78X3Z9EF1K8N6SKQ0WJUQ.uasset",
+        "packageSHA256": "c3871432fe7f79d9ea555e0a5a50fadcc747dcf84cf195b02ba7285e4e1eecef",
+        "auditLine": 574,
+        "currentAssetVectorOffset": 7708
+      }
+    },
+    {
+      "id": "Changeling",
+      "name": "Mysterious House",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        10045.340815795113,
+        -45257.68364416331,
+        44.00000000000006
+      ],
+      "terrainUV": [
+        0.5249140397,
+        0.3877537608
+      ],
+      "legacyLabel": "Mysterious House",
+      "actorLabel": "POIActor_Changeling",
+      "poiTag": "Narrative.POIs.Eclipsed.Changeling",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/3/VS/WIMAUXCUF57QV9Y7G91PGR.uasset",
+      "packageSHA256": "8c8972b28541c2a565ebd49e70b311917ebe8df254b6f3d8b35f31942a10b69b",
+      "catalogLine": 10,
+      "assetLocatorLine": 323,
+      "currentAssetVectorOffset": 8286,
+      "station": {
+        "name": "DollStation_Changeling",
+        "worldCm": [
+          9915.090904,
+          -45205.376198,
+          261
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/9/M6/9FBUGABYBL3JB5NZN3BQNG.uasset",
+        "packageSHA256": "d52844f4a4e297050019a02fdd25c3df7a86de1e556a0081ce706793e4b5b384",
+        "auditLine": 357,
+        "currentAssetVectorOffset": 7706
+      }
+    },
+    {
+      "id": "CultArena",
+      "name": "The Sixfold Crucible",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        78084,
+        -20861,
+        5639
+      ],
+      "terrainUV": [
+        0.6936607143,
+        0.4482614087
+      ],
+      "legacyLabel": "Cult Arena",
+      "actorLabel": "POIActor_CultArena",
+      "poiTag": "Narrative.POIs.Eclipsed.CultArena",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/4/S4/TQ2BINQU7GXXQ4KBJNI6HP.uasset",
+      "packageSHA256": "414f8f359a3ada9eb04c4fe41038886c95ac2907c71ed2e10a2f480007a52ab9",
+      "catalogLine": 22,
+      "assetLocatorLine": 390,
+      "currentAssetVectorOffset": 8293,
+      "station": {
+        "name": "DollStation_CultArena",
+        "worldCm": [
+          78069,
+          -21000,
+          5824
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/5/SI/T4DUBG7P7VSCPHU4ZVBKYC.uasset",
+        "packageSHA256": "0025667ba0000560b463f7199d3718aaf8027e791c3dd2e0bab911298522763a",
+        "auditLine": 217,
+        "currentAssetVectorOffset": 7694
+      }
+    },
+    {
+      "id": "TheivesHub",
+      "name": "The Murk Cistern",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        -44716,
+        20684,
+        90
+      ],
+      "terrainUV": [
+        0.3890972222,
+        0.5512996032
+      ],
+      "legacyLabel": "Theives' Hub",
+      "actorLabel": "POIActor_TheivesHub",
+      "poiTag": "Narrative.POIs.Eclipsed.TheivesHub",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/5/NS/Z6SFG0W4QW0AU5SATL1AZK.uasset",
+      "packageSHA256": "a8140f5ecaed82561a656b75aa40f95fd42f55a994c3798f17acc968a5d6e361",
+      "catalogLine": 15,
+      "assetLocatorLine": 471,
+      "currentAssetVectorOffset": 8290,
+      "station": {
+        "name": "DollStation_TheivesHub",
+        "worldCm": [
+          -44779,
+          20835,
+          270
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/0/G6/HVI3DC2CQ1CXK51V4J8OOO.uasset",
+        "packageSHA256": "ba8e7ae96971948ff1c9ba00cff5c0f7f97f474e541600e1d03bf3222a8f0b1f",
+        "auditLine": 2,
+        "currentAssetVectorOffset": 7657
+      }
+    },
+    {
+      "id": "CavePath",
+      "name": "Cave Path",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        42371,
+        -26167,
+        1049
+      ],
+      "terrainUV": [
+        0.6050868056,
+        0.4351016865
+      ],
+      "legacyLabel": "Cave Path",
+      "actorLabel": "POIActor_CavePath",
+      "poiTag": "Narrative.POIs.Eclipsed.CavePath",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/5/T0/RUNVLDNJFJ3VRLY4SS6DD2.uasset",
+      "packageSHA256": "88fd64557b55f48c0ca0f96a8262691eaf2ae8130578b805017d3ae35b47f7d6",
+      "catalogLine": 20,
+      "assetLocatorLine": 491,
+      "currentAssetVectorOffset": 8266,
+      "station": {
+        "name": "DollStation_CavePath",
+        "worldCm": [
+          42369.358692,
+          -26162.032536,
+          1071
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/B/QE/I4C7AIQNH8N4HQUY97HZYZ.uasset",
+        "packageSHA256": "692b37cf6db3264fb0b31c7e8bfa87b04151b16e8ec304620bbf7b1d1e74886b",
+        "auditLine": 564,
+        "currentAssetVectorOffset": 7684
+      }
+    },
+    {
+      "id": "City",
+      "name": "Cairnhold",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        -15939.554659374779,
+        27906.656898579717,
+        87.00000000000091
+      ],
+      "terrainUV": [
+        0.4604673744,
+        0.5692129387
+      ],
+      "legacyLabel": "City Wall",
+      "actorLabel": "POIActor_City",
+      "poiTag": "Narrative.POIs.Eclipsed.City",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/6/RE/UCWBGRU609NLBD64UQL4VX.uasset",
+      "packageSHA256": "26e876abd4b2033aa002eb78e384d4843bacf9739d53ba0219c8c2c2bd1a4fc2",
+      "catalogLine": 17,
+      "assetLocatorLine": 596,
+      "currentAssetVectorOffset": 8238,
+      "station": {
+        "name": "DollStation_City",
+        "worldCm": [
+          -15924,
+          27689,
+          272
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/2/NU/5VA1TO45BXYRHPQL8ONXHA.uasset",
+        "packageSHA256": "55d283af3c2836e7a82827d0542fbd93a57ab9d513ad29737d260ae506b92fd2",
+        "auditLine": 67,
+        "currentAssetVectorOffset": 7666
+      }
+    },
+    {
+      "id": "WitchChurch",
+      "name": "Chapel of Mourngate",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        105319,
+        -44226,
+        5613
+      ],
+      "terrainUV": [
+        0.7612078373,
+        0.3903125
+      ],
+      "legacyLabel": "Witch Church",
+      "actorLabel": "POIActor_WitchChurch",
+      "poiTag": "Narrative.POIs.Eclipsed.WitchChurch",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/8/6S/62WD0928146Y2O2IR2K535.uasset",
+      "packageSHA256": "8e9ae16d44eaef8e4e468b1a6a65ba3f04c56512a02bf99ca6a45782c25dbd3c",
+      "catalogLine": 26,
+      "assetLocatorLine": 733,
+      "currentAssetVectorOffset": 8305,
+      "station": {
+        "name": "DollStation_WitchChurch",
+        "worldCm": [
+          105228,
+          -44380,
+          5824
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/E/TA/4Z2KZ38P3BFREAX3BFYWGO.uasset",
+        "packageSHA256": "6efaabfdadb95c2f5ceca5a6e600a5a5d95b739f6448932bcf979ff3627952fa",
+        "auditLine": 700,
+        "currentAssetVectorOffset": 7712
+      }
+    },
+    {
+      "id": "Crossroads",
+      "name": "Veilcross",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        -53429,
+        90366,
+        1841
+      ],
+      "terrainUV": [
+        0.3674875992,
+        0.7241220238
+      ],
+      "legacyLabel": "Crossroads",
+      "actorLabel": "POIActor_Crossroads",
+      "poiTag": "Narrative.POIs.Eclipsed.Crossroads",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/8/K2/Z7ZVJEOORBUSXFERJU9K54.uasset",
+      "packageSHA256": "4caba661a2cd8cacf960094e2daa6297e0c47f1b9ebb8a7b762c6a2141074892",
+      "catalogLine": 28,
+      "assetLocatorLine": 770,
+      "currentAssetVectorOffset": 8276,
+      "station": {
+        "name": "DollStation_Crossroads",
+        "worldCm": [
+          -53349,
+          90286,
+          1753.62333
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/2/WH/Q6OLSNAF7KVMQHM6JFJ78K.uasset",
+        "packageSHA256": "7becc923f696f09452045d4d8d682c6114e8e95d3310a9691fbd1636f25af102",
+        "auditLine": 132,
+        "currentAssetVectorOffset": 7698
+      }
+    },
+    {
+      "id": "HiddenVillage",
+      "name": "Thornhallow",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        -41664,
+        -46015,
+        187
+      ],
+      "terrainUV": [
+        0.3966666667,
+        0.385875496
+      ],
+      "legacyLabel": "Hidden Village",
+      "actorLabel": "POIActor_HiddenVillage",
+      "poiTag": "Narrative.POIs.Eclipsed.HiddenVillage",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/A/BP/CWW3NPIAOIMS3ZG2PYKWK3.uasset",
+      "packageSHA256": "50473d8dc43a0b0b442da70a106b06a1c2b583853ed2f3d28957abf60941482b",
+      "catalogLine": 3,
+      "assetLocatorLine": 918,
+      "currentAssetVectorOffset": 8299,
+      "station": {
+        "name": "DollStation_HiddenVillage",
+        "worldCm": [
+          -41694.2916,
+          -45725.030314,
+          747
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/A/7I/CGLMXR0NYW3LU34NP5YCG5.uasset",
+        "packageSHA256": "2aa4f6f984a36ef0f0faa3d9b30a951ffaeb3e4d0df250f241187cbce35b28ba",
+        "auditLine": 422,
+        "currentAssetVectorOffset": 7726
+      }
+    },
+    {
+      "id": "StartVillage",
+      "name": "Harrowwick",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        35360,
+        -62340,
+        680
+      ],
+      "terrainUV": [
+        0.5876984127,
+        0.3453869048
+      ],
+      "legacyLabel": "Start Village",
+      "actorLabel": "POIActor_StartVillage",
+      "poiTag": "Narrative.POIs.Eclipsed.StartVillage",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/C/GY/21UVYL0JZ6AO0HZY6D19YI.uasset",
+      "packageSHA256": "0656b3d2e709603a23903b34cecc34f7d87a9370c9c9723aef2f49023f6a8e2d",
+      "catalogLine": 8,
+      "assetLocatorLine": 1110,
+      "currentAssetVectorOffset": 8292,
+      "station": {
+        "name": "DollStation_StartVillage",
+        "worldCm": [
+          35356,
+          -62336,
+          419
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/A/WP/9W6VMRCBWO3DW2BQKDLAX4.uasset",
+        "packageSHA256": "d3b4a77d9f355e0abe0b5743fadd57bc213e4b13fe67464849bd639455e81d0c",
+        "auditLine": 487,
+        "currentAssetVectorOffset": 7789
+      }
+    },
+    {
+      "id": "WitchHut",
+      "name": "Mourngate Hut",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        114479,
+        -33339,
+        5627
+      ],
+      "terrainUV": [
+        0.7839260913,
+        0.4173139881
+      ],
+      "legacyLabel": "Witch Hut",
+      "actorLabel": "POIActor_WitchHut",
+      "poiTag": "Narrative.POIs.Eclipsed.WitchHut",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/C/HQ/K6YSBSDLT5983QHLU2UP22.uasset",
+      "packageSHA256": "1b5e94996c32eb84e5e6f31b175b2ae8708deed42b13c0ec23fe5d8d65c9c904",
+      "catalogLine": 27,
+      "assetLocatorLine": 1114,
+      "currentAssetVectorOffset": 8274,
+      "station": {
+        "name": "DollStation_WitchHut",
+        "worldCm": [
+          114593,
+          -33472,
+          5810
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/A/ZC/5NIDX8WLQE88VWHE7WHRJ7.uasset",
+        "packageSHA256": "c1599d976d1f07025bd97f9b33b52fac4100b73334e5e80b0be67dd923e27502",
+        "auditLine": 499,
+        "currentAssetVectorOffset": 7696
+      }
+    },
+    {
+      "id": "Templars",
+      "name": "Iron Vow Hold",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        -83183,
+        11004,
+        149
+      ],
+      "terrainUV": [
+        0.2936929563,
+        0.5272916667
+      ],
+      "legacyLabel": "Templar Kingdom",
+      "actorLabel": "POIActor_Templars",
+      "poiTag": "Narrative.POIs.Eclipsed.Templars",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/C/N0/FX8TRY5TSDS3XVE9MMW03R.uasset",
+      "packageSHA256": "5b3defa24c118e48789f16d651757e696fb4bbbe96bd001e3607650b5f0e4d44",
+      "catalogLine": 14,
+      "assetLocatorLine": 1130,
+      "currentAssetVectorOffset": 8233,
+      "station": {
+        "name": "DollStation_Templars",
+        "worldCm": [
+          -83061,
+          11111,
+          265
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/5/QP/JP5FSSXUJV2X8ZEKQCF94W.uasset",
+        "packageSHA256": "ad6128d1957a7438fc8c993fab36627eb5cbd33d20006d35ab9ed36d6e7261e8",
+        "auditLine": 152,
+        "currentAssetVectorOffset": 7686
+      }
+    },
+    {
+      "id": "CultVillage",
+      "name": "Vesper Hollow",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        101847,
+        -8455,
+        5101
+      ],
+      "terrainUV": [
+        0.7525967262,
+        0.4790302579
+      ],
+      "legacyLabel": "Cult Village",
+      "actorLabel": "POIActor_CultVillage",
+      "poiTag": "Narrative.POIs.Eclipsed.CultVillage",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/C/R9/X1WCEUAH4VP5QRO9XJIIXF.uasset",
+      "packageSHA256": "23526e750dbdc12ff776b8406c3ff3fb63c0b6f9370b28af8c90e12347d5d61c",
+      "catalogLine": 24,
+      "assetLocatorLine": 1142,
+      "currentAssetVectorOffset": 8293,
+      "station": {
+        "name": "DollStation_CultVillage",
+        "worldCm": [
+          101968.000001,
+          -8614.999997,
+          4997
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/6/31/XEBYDHAC0SUP6BYIE6US7C.uasset",
+        "packageSHA256": "346dcfe7083850b22604092d6fd544f08f746c969ae0823f03e25cbd348cb58c",
+        "auditLine": 282,
+        "currentAssetVectorOffset": 7491
+      }
+    },
+    {
+      "id": "Forest.Church2",
+      "name": "Chapel of the Forgotten",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        21695,
+        11889,
+        7
+      ],
+      "terrainUV": [
+        0.5538070437,
+        0.5294866071
+      ],
+      "legacyLabel": "Graveyard",
+      "actorLabel": "POIActor_ForestChurch2",
+      "poiTag": "Narrative.POIs.Eclipsed.Forest.Church2",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/D/A5/7DNRO56CJJ1APWQLHH457N.uasset",
+      "packageSHA256": "e4eeb61f61a42f61c30f5697d094174cabcfa762a26fc71ccd66a795ff481dc1",
+      "catalogLine": 18,
+      "assetLocatorLine": 1185,
+      "currentAssetVectorOffset": 8285,
+      "station": {
+        "name": "DollStation_ForestChurch2",
+        "worldCm": [
+          21364,
+          11766,
+          166
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/8/6U/53523ENNDO0FZ9EOUHU9DG.uasset",
+        "packageSHA256": "cddbb6a0f26a108c0a4f45472763ded0bd9c842f6e9a6ceddf843dd4e37ae6ce",
+        "auditLine": 287,
+        "currentAssetVectorOffset": 7672
+      }
+    },
+    {
+      "id": "CaveWendigo",
+      "name": "Hornfall Cavern",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        53762.45487958989,
+        -6563.821270244595,
+        3529
+      ],
+      "terrainUV": [
+        0.6333394218,
+        0.4837206814
+      ],
+      "legacyLabel": "Wendigo Cave",
+      "actorLabel": "POIActor_CaveWendigo",
+      "poiTag": "Narrative.POIs.Eclipsed.CaveWendigo",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/E/IW/7IMQ51GD73YLLVXHFKF8QE.uasset",
+      "packageSHA256": "6ccc1475bc4529a68cba9b15c612db83c50d1868d63d7d1b393b4fb26bea1dbb",
+      "catalogLine": 21,
+      "assetLocatorLine": 1321,
+      "currentAssetVectorOffset": 8297,
+      "station": {
+        "name": "DollStation_CaveWendigo",
+        "worldCm": [
+          53858.168238,
+          -6505.03557,
+          3435.15625
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/E/GE/5JRWTP9OGD4LJVX2V9SKJ9.uasset",
+        "packageSHA256": "dc1fba8337f122780f133c8ce9e66c25c52b514461ff84f1a5f0748692dacfc7",
+        "auditLine": 653,
+        "currentAssetVectorOffset": 7710
+      }
+    },
+    {
+      "id": "AbandonedVillage",
+      "name": "Abandoned Village",
+      "kind": "regional Doll waypoint",
+      "includeSurfaceMap": true,
+      "worldCm": [
+        32837,
+        -38146,
+        92
+      ],
+      "terrainUV": [
+        0.5814409722,
+        0.4053918651
+      ],
+      "legacyLabel": "Abandoned Village",
+      "actorLabel": "POIActor_AbandonedVillage",
+      "poiTag": "Narrative.POIs.Eclipsed.AbandonedVillage",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/E/N3/IW2UMQH7O1YHZQ13J9YLHI.uasset",
+      "packageSHA256": "f5caf18734d96c7246f8aa3096faae101c69398a1b0456584fbc050a59a75fa0",
+      "catalogLine": 11,
+      "assetLocatorLine": 1330,
+      "currentAssetVectorOffset": 8273,
+      "station": {
+        "name": "DollStation_AbandonedVillage",
+        "worldCm": [
+          32867.000002,
+          -38248.999976,
+          0
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/4/IG/PHNZ8XIZRI0YUQSFS51690.uasset",
+        "packageSHA256": "1d453e37bccf5b109b63ba1d0fe21ba0021eedbb12892a0a97b44b80c1c00fd7",
+        "auditLine": 147,
+        "currentAssetVectorOffset": 7602
+      }
+    }
+  ],
+  "specialOrExcluded": [
+    {
+      "id": "Dev.Cow",
+      "name": "Cow",
+      "kind": "excluded development animal POI",
+      "includeSurfaceMap": false,
+      "worldCm": [
+        -25720,
+        3588,
+        -242
+      ],
+      "terrainUV": [
+        0.4362103175,
+        0.5088988095
+      ],
+      "legacyLabel": "Cow",
+      "actorLabel": "POIActor3",
+      "poiTag": "Narrative.POIs.Eclipsed.Dev.Cow",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/0/DN/K3C3O41M6XS50CKTCUWPZQ.uasset",
+      "packageSHA256": "04f5e7dee585c6eb2a6f3208b95cf121634c356edfabc81bcefab4cac977ee6f",
+      "catalogLine": 16,
+      "assetLocatorLine": 32,
+      "currentAssetVectorOffset": 7994
+    },
+    {
+      "id": "Dev.Moose",
+      "name": "Moose",
+      "kind": "excluded development animal POI",
+      "includeSurfaceMap": false,
+      "worldCm": [
+        28867,
+        -7088,
+        -225
+      ],
+      "terrainUV": [
+        0.5715947421,
+        0.4824206349
+      ],
+      "legacyLabel": "Mooose",
+      "actorLabel": "POIActor4",
+      "poiTag": "Narrative.POIs.Eclipsed.Dev.Moose",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/2/5L/FAL1YOBSNT11IASCAR3DJ3.uasset",
+      "packageSHA256": "7f8de576aa410b49a1570a09a8a509fea851a9bc11bd2f79f51f904b807c2c55",
+      "catalogLine": 13,
+      "assetLocatorLine": 179,
+      "currentAssetVectorOffset": 7976
+    },
+    {
+      "id": "TrainingArena",
+      "name": "The Pale Ring",
+      "kind": "special sky Training Arena",
+      "includeSurfaceMap": false,
+      "worldCm": [
+        90148,
+        -23453,
+        24642
+      ],
+      "terrainUV": [
+        0.7235813492,
+        0.4418328373
+      ],
+      "legacyLabel": "Training Arena",
+      "actorLabel": "POIActor_TrainingArena",
+      "poiTag": "Narrative.POIs.Eclipsed.TrainingArena",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/3/ZT/ANEZAUZK5HP8RQ0I86148M.uasset",
+      "packageSHA256": "3bf13b304ca4c9e9b0e0832c861d68a2a4fa50bb529eabea0a3bf661b09afbb5",
+      "catalogLine": 23,
+      "assetLocatorLine": 331,
+      "currentAssetVectorOffset": 8211,
+      "station": {
+        "name": "DollStation_TrainingArena",
+        "worldCm": [
+          90170,
+          -23596,
+          24565.994141
+        ],
+        "package": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/3/Y3/9GQYYKDKZ0GKPKSOXF04RP.uasset",
+        "packageSHA256": "7636f281f640aea6ab18d4f3c4a0a863035da3dc07a1bd8732121f0022e37269",
+        "auditLine": 142,
+        "currentAssetVectorOffset": 9288
+      }
+    },
+    {
+      "id": "Dev.Deer",
+      "name": "Deer",
+      "kind": "excluded development animal POI",
+      "includeSurfaceMap": false,
+      "worldCm": [
+        -6745,
+        -27790,
+        -244
+      ],
+      "terrainUV": [
+        0.4832713294,
+        0.4310763889
+      ],
+      "legacyLabel": "Deer",
+      "actorLabel": "POIActor",
+      "poiTag": "Narrative.POIs.Eclipsed.Dev.Deer",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/4/2G/3SMBKGGNPVIRFAJ8FT8EHY.uasset",
+      "packageSHA256": "a48bc75370e1073841d4ec5a25cd782f1cf3a7670c5accb00faf88d982d5734d",
+      "catalogLine": 5,
+      "assetLocatorLine": 337,
+      "currentAssetVectorOffset": 7995
+    },
+    {
+      "id": "Dev.Bear",
+      "name": "Bear",
+      "kind": "excluded development animal POI",
+      "includeSurfaceMap": false,
+      "worldCm": [
+        -46684,
+        -17288,
+        -351
+      ],
+      "terrainUV": [
+        0.3842162698,
+        0.4571230159
+      ],
+      "legacyLabel": "Bear",
+      "actorLabel": "POIActor2",
+      "poiTag": "Narrative.POIs.Eclipsed.Dev.Bear",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/6/JB/2BPOKHJIXQS3KH2TJY5BOE.uasset",
+      "packageSHA256": "76c63a5310a5d7e4b9f71d6699303028176bbecf96a70ba4827f3fb03816d2c5",
+      "catalogLine": 4,
+      "assetLocatorLine": 569,
+      "currentAssetVectorOffset": 7997
+    },
+    {
+      "id": "Dev.Goat",
+      "name": "Goat",
+      "kind": "excluded development animal POI",
+      "includeSurfaceMap": false,
+      "worldCm": [
+        40954,
+        -51815,
+        166
+      ],
+      "terrainUV": [
+        0.6015724206,
+        0.3714905754
+      ],
+      "legacyLabel": "Goat",
+      "actorLabel": "POIActor5",
+      "poiTag": "Narrative.POIs.Eclipsed.Dev.Goat",
+      "poiPackage": "Content/__ExternalActors__/Maps/L_EclipsedRealms_OpenWorldMap/E/83/5GNBHREIC5HJO9RUK4A44X.uasset",
+      "packageSHA256": "f7840fd8bb334dfbeff0f18bb925c3a539c2c55596e2fe555add97e268faaf15",
+      "catalogLine": 9,
+      "assetLocatorLine": 1293,
+      "currentAssetVectorOffset": 7997
+    }
+  ],
+  "openingAndOtherLandmarks": [
+    {
+      "name": "Opening cage — player start",
+      "kind": "story spawn",
+      "worldCm": [
+        25671,
+        -92348,
+        -3121
+      ],
+      "terrainUV": [
+        0.5636681548,
+        0.2709623016
+      ],
+      "sources": [
+        "Source/EclipsedRealms/Story/EclipsedStoryPlaces.h:38",
+        "Saved/EclipsedAudit/StoryWorldWiring.txt:4",
+        "Saved/EclipsedAudit/MapRegion_Box_StartHouseOssuary.txt:4"
+      ],
+      "note": "Underground. Distinct from the regional Shuttered House travel point.",
+      "travel": false
+    },
+    {
+      "name": "The Doll beside the cage",
+      "kind": "story apparition",
+      "worldCm": [
+        28082,
+        -92636,
+        -2274
+      ],
+      "terrainUV": [
+        0.5696478175,
+        0.2702480159
+      ],
+      "sources": [
+        "Source/EclipsedRealms/Story/EclipsedStoryPlaces.h:39",
+        "Saved/EclipsedAudit/StoryWorldWiring.txt:2"
+      ],
+      "note": "Story apparition replaces the older tutorial spawner.",
+      "travel": false
+    },
+    {
+      "name": "The way out of the cage",
+      "kind": "story objective",
+      "worldCm": [
+        29103,
+        -92959,
+        -2420
+      ],
+      "terrainUV": [
+        0.5721800595,
+        0.2694469246
+      ],
+      "sources": [
+        "Source/EclipsedRealms/Story/EclipsedStoryPlaces.h:40",
+        "Saved/EclipsedAudit/StoryWorldWiring.txt:6"
+      ],
+      "note": "Opening objective at the ossuary door.",
+      "travel": false
+    },
+    {
+      "name": "The Shuttered House — attic",
+      "kind": "story objective",
+      "worldCm": [
+        33200,
+        -100150,
+        2500
+      ],
+      "terrainUV": [
+        0.5823412698,
+        0.2516121032
+      ],
+      "sources": [
+        "Source/EclipsedRealms/Story/EclipsedStoryPlaces.h:44",
+        "Saved/EclipsedAudit/StoryWorldWiring.txt:11"
+      ],
+      "note": "Attic entrance; not the regional Doll marker or exact ritual center.",
+      "travel": false
+    },
+    {
+      "name": "The village tavern",
+      "kind": "story location",
+      "worldCm": [
+        35915,
+        -83300,
+        547
+      ],
+      "terrainUV": [
+        0.5890749008,
+        0.2934027778
+      ],
+      "sources": [
+        "Source/EclipsedRealms/Story/EclipsedStoryPlaces.h:48"
+      ],
+      "note": "A narrative location, not a separate waypoint.",
+      "travel": false
+    },
+    {
+      "name": "Harrowwick gallows — platform",
+      "kind": "placed story scene",
+      "worldCm": [
+        34501.65,
+        -79766.98,
+        484.37
+      ],
+      "terrainUV": [
+        0.5855695685,
+        0.3021652282
+      ],
+      "sources": [
+        "Saved/EclipsedAudit/SavingPlacement.txt:6"
+      ],
+      "note": "Physical platform in the staged scene, anchored to SM_Prop_Gallows_Prefab6. Other gallows prop rejected; actual story position to use for a gallows landmark.",
+      "travel": false
+    },
+    {
+      "name": "Harrowwick gallows — approach",
+      "kind": "story trigger",
+      "worldCm": [
+        34875.71,
+        -80385.37,
+        679
+      ],
+      "terrainUV": [
+        0.5864972966,
+        0.3006315228
+      ],
+      "sources": [
+        "Saved/EclipsedAudit/SavingPlacement.txt:9"
+      ],
+      "note": "Single trigger for the scene, not the platform.",
+      "travel": false
+    },
+    {
+      "name": "Harrowwick — north square",
+      "kind": "story objective",
+      "worldCm": [
+        35549,
+        -73110,
+        403
+      ],
+      "terrainUV": [
+        0.5881671627,
+        0.3186755952
+      ],
+      "sources": [
+        "Source/EclipsedRealms/Story/EclipsedStoryPlaces.h:51",
+        "Source/EclipsedRealmsEditor/NarrativeCreators/Tests/EclipsedAlignmentATools.cpp:221"
+      ],
+      "note": "Objective/gathering marker; not the physical gallows.",
+      "travel": false
+    },
+    {
+      "name": "Opera Hall — Jester stage",
+      "kind": "story location",
+      "worldCm": [
+        -713,
+        -57170,
+        1016
+      ],
+      "terrainUV": [
+        0.4982316468,
+        0.3582093254
+      ],
+      "sources": [
+        "Source/EclipsedRealms/Story/EclipsedStoryPlaces.h:71"
+      ],
+      "note": "Story-world stage; not the Mysterious House travel pin or a Cairnhold location.",
+      "travel": false
+    }
+  ]
+}
