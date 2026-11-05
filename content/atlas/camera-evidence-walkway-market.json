@@ -1,0 +1,1945 @@
+{
+  "purpose": "Private cinematic camera/cast proposals, distinct from public travel pins. No site/game/Bible changes made. No invented geography. Recommended labels describe compositions, not newly named lore locations.",
+  "landscape": {
+    "file": "C:\\Users\\tevin\\Documents\\ChatGPT\\Complete 2\\realm-relief-research\\OpenWorld-4033-height16.png",
+    "sha256": "a3683d7b9f7ed0669e8173d0fb7b1e6b64f264b568ef91689625313173fbb9ce",
+    "sampling": "Original 4033x4033 registered one-metre height samples, bilinear within each cell; output cm. No guessed flat plane."
+  },
+  "proposals": [
+    {
+      "id": "raised-walkway-recommended",
+      "area": "thornhallow",
+      "actorAnchorUEcm": [
+        -42383,
+        -44890,
+        564.3731
+      ],
+      "eyeUEcm": [
+        -42813,
+        -45400,
+        840.3731
+      ],
+      "aimUEcm": [
+        -42383,
+        -44890,
+        700.3731
+      ],
+      "actorAnchorFlightM": [
+        -423.83,
+        5.643731,
+        -448.9
+      ],
+      "cameraEyeFlightM": [
+        -428.13,
+        8.403731,
+        -454.0
+      ],
+      "cameraAimFlightM": [
+        -423.83,
+        7.003731,
+        -448.9
+      ],
+      "obstacleSliceClearanceCm": null,
+      "footprintTest": "nine exact vertical rays across a 3.0m x 3.0m cast footprint; terrain-level obstacle slice does not apply to raised floor candidates; not gameplay collision/navmesh proof",
+      "floorRangeCm": [
+        560.3731,
+        563.1586
+      ],
+      "samples": [
+        {
+          "xyCm": [
+            -42383,
+            -44890
+          ],
+          "landscapeCm": -208.4141,
+          "floorCm": 560.3731,
+          "floorHit": {
+            "z": 560.373088141094,
+            "slopeDeg": 7.871404088081626e-06,
+            "record": 226,
+            "section": 0,
+            "triangle": 17
+          },
+          "overheadClearanceCm": null,
+          "overheadHit": null
+        },
+        {
+          "xyCm": [
+            -42533,
+            -45040
+          ],
+          "landscapeCm": -177.5859,
+          "floorCm": 563.1586,
+          "floorHit": {
+            "z": 563.1586000235797,
+            "slopeDeg": 7.871404088081626e-06,
+            "record": 232,
+            "section": 0,
+            "triangle": 17
+          },
+          "overheadClearanceCm": null,
+          "overheadHit": null
+        },
+        {
+          "xyCm": [
+            -42383,
+            -45040
+          ],
+          "landscapeCm": -167.1125,
+          "floorCm": 560.3731,
+          "floorHit": {
+            "z": 560.3731047142782,
+            "slopeDeg": 1.1164539134006841e-05,
+            "record": 227,
+            "section": 0,
+            "triangle": 67
+          },
+          "overheadClearanceCm": null,
+          "overheadHit": null
+        },
+        {
+          "xyCm": [
+            -42233,
+            -45040
+          ],
+          "landscapeCm": -156.1719,
+          "floorCm": 560.3731,
+          "floorHit": {
+            "z": 560.3730730723771,
+            "slopeDeg": 4.3900904737890166e-05,
+            "record": 226,
+            "section": 0,
+            "triangle": 45
+          },
+          "overheadClearanceCm": null,
+          "overheadHit": null
+        },
+        {
+          "xyCm": [
+            -42533,
+            -44890
+          ],
+          "landscapeCm": -218.9617,
+          "floorCm": 563.1586,
+          "floorHit": {
+            "z": 563.1585749820483,
+            "slopeDeg": 1.1164539134006841e-05,
+            "record": 232,
+            "section": 0,
+            "triangle": 30
+          },
+          "overheadClearanceCm": null,
+          "overheadHit": null
+        },
+        {
+          "xyCm": [
+            -42233,
+            -44890
+          ],
+          "landscapeCm": -196.8727,
+          "floorCm": 560.3731,
+          "floorHit": {
+            "z": 560.373086339316,
+            "slopeDeg": 1.1164539134006841e-05,
+            "record": 226,
+            "section": 0,
+            "triangle": 67
+          },
+          "overheadClearanceCm": 1321.466,
+          "overheadHit": {
+            "z": 1881.839290587208,
+            "slopeDeg": 44.76486146149723,
+            "record": 48,
+            "section": 0,
+            "triangle": 499
+          }
+        },
+        {
+          "xyCm": [
+            -42533,
+            -44740
+          ],
+          "landscapeCm": -256.3891,
+          "floorCm": 563.1586,
+          "floorHit": {
+            "z": 563.1585897744854,
+            "slopeDeg": 4.3900904737890166e-05,
+            "record": 233,
+            "section": 0,
+            "triangle": 45
+          },
+          "overheadClearanceCm": null,
+          "overheadHit": null
+        },
+        {
+          "xyCm": [
+            -42383,
+            -44740
+          ],
+          "landscapeCm": -246.6969,
+          "floorCm": 563.1586,
+          "floorHit": {
+            "z": 563.1585933570201,
+            "slopeDeg": 1.1164539134006841e-05,
+            "record": 233,
+            "section": 0,
+            "triangle": 30
+          },
+          "overheadClearanceCm": null,
+          "overheadHit": null
+        },
+        {
+          "xyCm": [
+            -42233,
+            -44740
+          ],
+          "landscapeCm": -235.7016,
+          "floorCm": 560.3731,
+          "floorHit": {
+            "z": 560.3731081749469,
+            "slopeDeg": 7.824964720612764e-06,
+            "record": 226,
+            "section": 0,
+            "triangle": 53
+          },
+          "overheadClearanceCm": null,
+          "overheadHit": null
+        }
+      ],
+      "settingRecordIndices": [
+        9,
+        1008,
+        1002,
+        53,
+        1003,
+        54,
+        72,
+        1145
+      ],
+      "records": {
+        "9": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 77754,
+          "transformIndex": 0,
+          "mesh": "459745a6c70b7ae55265",
+          "asset": "/Game/NordicCastle/Meshes/SM_Pillar_03.SM_Pillar_03",
+          "actor": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_83",
+          "component": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_83.StaticMeshComponent0",
+          "transform": [
+            -42001.11745844075,
+            -44820.21795838248,
+            131.59759999998732,
+            -3.075984392209421e-19,
+            2.0014806575746494e-16,
+            0.8311968192800725,
+            0.5559782798083847,
+            0.875,
+            0.875,
+            0.75
+          ],
+          "boundsCm": [
+            [
+              -42389.57195969782,
+              -45209.40242542598,
+              131.5974650450488
+            ],
+            [
+              -41612.231020205225,
+              -44432.06148593338,
+              1725.3283739257686
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\459745a6c70b7ae55265.json",
+          "materials": [
+            "/Game/NordicCastle/Materials/MI_WoodTrim01.MI_WoodTrim01",
+            "/Game/NordicCastle/Materials/MI_Trim002.MI_Trim002"
+          ]
+        },
+        "48": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 77811,
+          "transformIndex": 0,
+          "mesh": "3468ee172c0a4a1c4206",
+          "asset": "/Game/NordicCastle/Meshes/SM_DeerSkull.SM_DeerSkull",
+          "actor": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_1342",
+          "component": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_1342.StaticMeshComponent0",
+          "transform": [
+            -41988.559623961424,
+            -44797.81875083691,
+            1725.2162999999873,
+            0.058539129341721056,
+            -0.013645604158992238,
+            -0.2488276948509071,
+            0.966680788108584,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "boundsCm": [
+            [
+              -42305.687956138645,
+              -45153.94495918669,
+              1693.6748437451208
+            ],
+            [
+              -41750.66187334839,
+              -44587.038825893454,
+              2136.0951808836844
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\3468ee172c0a4a1c4206.json",
+          "materials": [
+            "/Game/NordicCastle/Materials/MI_DeerSkull.MI_DeerSkull",
+            "/Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial"
+          ]
+        },
+        "53": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 77816,
+          "transformIndex": 0,
+          "mesh": "58993682f575e13f6443",
+          "asset": "/Game/NordicCastle/Meshes/SM_Cliff01.SM_Cliff01",
+          "actor": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_1506",
+          "component": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_1506.StaticMeshComponent0",
+          "transform": [
+            -43864.37182246336,
+            -43232.51618093833,
+            -2501.307900000013,
+            0.085130759320525,
+            0.06130847247252913,
+            0.4082908448016633,
+            0.9068035129352665,
+            1.3,
+            1.3,
+            1.4045426
+          ],
+          "boundsCm": [
+            [
+              -44697.88543320466,
+              -44461.54238489207,
+              -2745.987314147219
+            ],
+            [
+              -42287.75362421696,
+              -42272.22697704877,
+              499.74569518424437
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\58993682f575e13f6443.json",
+          "materials": [
+            "/Game/NordicCastle/Materials/MI_Cliff01.MI_Cliff01"
+          ]
+        },
+        "54": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 77817,
+          "transformIndex": 0,
+          "mesh": "58993682f575e13f6443",
+          "asset": "/Game/NordicCastle/Meshes/SM_Cliff01.SM_Cliff01",
+          "actor": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_1507",
+          "component": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_1507.StaticMeshComponent0",
+          "transform": [
+            -44323.8553608557,
+            -43758.13901985965,
+            -2400.205400000013,
+            0.1270744232897263,
+            -0.03260010224865143,
+            0.9547848746713946,
+            0.2667867451311815,
+            1.3,
+            1.3,
+            1.3
+          ],
+          "boundsCm": [
+            [
+              -45258.44221396113,
+              -44925.29253291635,
+              -2596.1132555858867
+            ],
+            [
+              -42856.425241403005,
+              -42716.365477199615,
+              394.10066305613805
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\58993682f575e13f6443.json",
+          "materials": [
+            "/Game/NordicCastle/Materials/MI_Cliff01.MI_Cliff01"
+          ]
+        },
+        "72": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 77855,
+          "transformIndex": 0,
+          "mesh": "58993682f575e13f6443",
+          "asset": "/Game/NordicCastle/Meshes/SM_Cliff01.SM_Cliff01",
+          "actor": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_251",
+          "component": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_251.StaticMeshComponent0",
+          "transform": [
+            -44317.621423684686,
+            -43121.30731975033,
+            -2391.098600000013,
+            0.12700359147773305,
+            0.054098615380445254,
+            0.23105631986936281,
+            0.9630972975842588,
+            1.3,
+            1.3,
+            1.3
+          ],
+          "boundsCm": [
+            [
+              -45085.44218610552,
+              -44642.93779849378,
+              -2685.0668074647633
+            ],
+            [
+              -42898.79317335791,
+              -42233.99952136403,
+              397.8925163631616
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\58993682f575e13f6443.json",
+          "materials": [
+            "/Game/NordicCastle/Materials/MI_Cliff01.MI_Cliff01"
+          ]
+        },
+        "226": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 78038,
+          "transformIndex": 0,
+          "mesh": "1b301af283fd6077eaf6",
+          "asset": "/Game/NordicCastle/Meshes/SM_FloorPanks_Full.SM_FloorPanks_Full",
+          "actor": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_788",
+          "component": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_788.StaticMeshComponent0",
+          "transform": [
+            -42110.611050847,
+            -44754.61642351772,
+            549.6098999999872,
+            -1.9446211923588445e-16,
+            4.736905134729834e-17,
+            -0.3420201013744753,
+            0.9396926360548931,
+            1.1060209,
+            1.0391495,
+            0.6636928
+          ],
+          "boundsCm": [
+            [
+              -42420.06447926649,
+              -45085.30876463242,
+              538.0945549679071
+            ],
+            [
+              -42019.92320609112,
+              -44674.17264833232,
+              560.373116908337
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\1b301af283fd6077eaf6.json",
+          "materials": [
+            "/Game/NordicCastle/Materials/MI_WoodTrim01.MI_WoodTrim01"
+          ]
+        },
+        "227": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 78039,
+          "transformIndex": 0,
+          "mesh": "1b301af283fd6077eaf6",
+          "asset": "/Game/NordicCastle/Meshes/SM_FloorPanks_Full.SM_FloorPanks_Full",
+          "actor": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_1496",
+          "component": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_1496.StaticMeshComponent0",
+          "transform": [
+            -42324.35586817117,
+            -45009.34750945633,
+            549.6098999999872,
+            -1.9446211923588445e-16,
+            4.736905134729834e-17,
+            -0.3420201013744753,
+            0.9396926360548931,
+            1.1060209,
+            1.0391495,
+            0.6636928
+          ],
+          "boundsCm": [
+            [
+              -42633.80929659066,
+              -45340.03985057103,
+              538.0945549679071
+            ],
+            [
+              -42233.668023415295,
+              -44928.903734270934,
+              560.373116908337
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\1b301af283fd6077eaf6.json",
+          "materials": [
+            "/Game/NordicCastle/Materials/MI_WoodTrim01.MI_WoodTrim01"
+          ]
+        },
+        "232": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 78044,
+          "transformIndex": 0,
+          "mesh": "1b301af283fd6077eaf6",
+          "asset": "/Game/NordicCastle/Meshes/SM_FloorPanks_Full.SM_FloorPanks_Full",
+          "actor": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_1501",
+          "component": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_1501.StaticMeshComponent0",
+          "transform": [
+            -42744.20757228708,
+            -45122.60059496073,
+            552.3953999999871,
+            4.736903197508494e-17,
+            1.9446212395476324e-16,
+            0.9396926019830273,
+            0.34202019498615555,
+            1.106021,
+            1.0391496,
+            0.6636931
+          ],
+          "boundsCm": [
+            [
+              -42834.89541010822,
+              -45203.04439648887,
+              540.8800497627826
+            ],
+            [
+              -42434.75407992069,
+              -44791.9082469827,
+              563.1586217734869
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\1b301af283fd6077eaf6.json",
+          "materials": [
+            "/Game/NordicCastle/Materials/MI_WoodTrim01.MI_WoodTrim01"
+          ]
+        },
+        "233": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 78045,
+          "transformIndex": 0,
+          "mesh": "1b301af283fd6077eaf6",
+          "asset": "/Game/NordicCastle/Meshes/SM_FloorPanks_Full.SM_FloorPanks_Full",
+          "actor": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_2304",
+          "component": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_2304.StaticMeshComponent0",
+          "transform": [
+            -42530.462754962915,
+            -44867.869509022115,
+            552.3953999999871,
+            4.736903197508494e-17,
+            1.9446212395476324e-16,
+            0.9396926019830273,
+            0.34202019498615555,
+            1.106021,
+            1.0391496,
+            0.6636931
+          ],
+          "boundsCm": [
+            [
+              -42621.150592784055,
+              -44948.31331055026,
+              540.8800497627826
+            ],
+            [
+              -42221.009262596526,
+              -44537.177161044085,
+              563.1586217734869
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\1b301af283fd6077eaf6.json",
+          "materials": [
+            "/Game/NordicCastle/Materials/MI_WoodTrim01.MI_WoodTrim01"
+          ]
+        },
+        "1002": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 79109,
+          "transformIndex": 0,
+          "mesh": "caa20ac5a900e86f627c",
+          "asset": "/Game/NordicCastle/Meshes/SM_ModularPart01_Wall02.SM_ModularPart01_Wall02",
+          "actor": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_114",
+          "component": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_114.StaticMeshComponent0",
+          "transform": [
+            -41894.255791252035,
+            -44981.73612208443,
+            111.96289999998726,
+            4.3980377463580796e-17,
+            1.952564192066813e-16,
+            0.9336031487556693,
+            0.3583087504283135,
+            1.1585623,
+            1.0335623,
+            1.187603
+          ],
+          "boundsCm": [
+            [
+              -42436.06580376713,
+              -45369.28489055997,
+              151.37076179628625
+            ],
+            [
+              -41977.81665516289,
+              -44867.38075474305,
+              536.2865875198544
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\caa20ac5a900e86f627c.json",
+          "materials": [
+            "/Game/NordicCastle/Materials/MI_MultiUVBase_Inst_3.MI_MultiUVBase_Inst_3"
+          ]
+        },
+        "1003": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 79110,
+          "transformIndex": 0,
+          "mesh": "caa20ac5a900e86f627c",
+          "asset": "/Game/NordicCastle/Meshes/SM_ModularPart01_Wall02.SM_ModularPart01_Wall02",
+          "actor": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_116",
+          "component": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_116.StaticMeshComponent0",
+          "transform": [
+            -42316.04514513136,
+            -45450.300117762665,
+            111.96279999998751,
+            4.3980377463580796e-17,
+            1.952564192066813e-16,
+            0.9336031487556693,
+            0.3583087504283135,
+            1.1585623,
+            1.0335623,
+            1.187603
+          ],
+          "boundsCm": [
+            [
+              -42857.85515764645,
+              -45837.8488862382,
+              151.3706617962865
+            ],
+            [
+              -42399.60600904221,
+              -45335.94475042128,
+              536.2864875198546
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\caa20ac5a900e86f627c.json",
+          "materials": [
+            "/Game/NordicCastle/Materials/MI_MultiUVBase_Inst_3.MI_MultiUVBase_Inst_3"
+          ]
+        },
+        "1008": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 79115,
+          "transformIndex": 0,
+          "mesh": "caa20ac5a900e86f627c",
+          "asset": "/Game/NordicCastle/Meshes/SM_ModularPart01_Wall02.SM_ModularPart01_Wall02",
+          "actor": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_98",
+          "component": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_98.StaticMeshComponent0",
+          "transform": [
+            -41982.85012491354,
+            -44973.96340953319,
+            111.46779999998716,
+            -8.762848262063681e-17,
+            1.7994608047095406e-16,
+            0.5052086460038889,
+            0.862997232905713,
+            1.0835266,
+            0.9423875,
+            1.2135823
+          ],
+          "boundsCm": [
+            [
+              -42427.89372395958,
+              -44880.45008852985,
+              151.7377248459454
+            ],
+            [
+              -41902.77877511339,
+              -44560.11047479951,
+              545.0737412487389
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\caa20ac5a900e86f627c.json",
+          "materials": [
+            "/Game/NordicCastle/Materials/MI_MultiUVBase_Inst_3.MI_MultiUVBase_Inst_3"
+          ]
+        },
+        "1145": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 79252,
+          "transformIndex": 0,
+          "mesh": "4ea4eeb18b2612e1b040",
+          "asset": "/Game/NordicCastle/Meshes/SM_ModularPart01_WindowWall.SM_ModularPart01_WindowWall",
+          "actor": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.FortWall01_C_23",
+          "component": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.FortWall01_C_23.SM_ModularPart01_WindowWall",
+          "transform": [
+            -42997.62946306889,
+            -43935.53917872306,
+            530.0051999999869,
+            -1.9427298945403314e-16,
+            4.813884514451346e-17,
+            -0.3382957755883182,
+            0.9410398334922376,
+            1.1,
+            -1.1,
+            1.1
+          ],
+          "boundsCm": [
+            [
+              -43337.486329877145,
+              -44548.681528017725,
+              530.4678190185415
+            ],
+            [
+              -42874.588283845216,
+              -44000.89201706801,
+              923.0288755370965
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\4ea4eeb18b2612e1b040.json",
+          "materials": [
+            "/Game/NordicCastle/Materials/MI_MultiUVBase_Inst_3.MI_MultiUVBase_Inst_3"
+          ]
+        },
+        "262": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 78074,
+          "transformIndex": 0,
+          "mesh": "1b301af283fd6077eaf6",
+          "asset": "/Game/NordicCastle/Meshes/SM_FloorPanks_Full.SM_FloorPanks_Full",
+          "actor": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_2635",
+          "component": "/Game/NordicCastle/Levels/L_Showcase01.L_Showcase01:PersistentLevel.StaticMeshActor_2635.StaticMeshComponent0",
+          "transform": [
+            -42655.23665235543,
+            -44818.32263891176,
+            547.2277999999874,
+            -0.9659258267788112,
+            0.2588190432747753,
+            6.413728013872537e-17,
+            -1.8959365005099983e-16,
+            1.106021,
+            1.0391496,
+            0.6636936
+          ],
+          "boundsCm": [
+            [
+              -42763.56360798127,
+              -44877.56080069824,
+              536.4645701179041
+            ],
+            [
+              -42386.57521387856,
+              -44467.92197916619,
+              558.7431589123988
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\1b301af283fd6077eaf6.json",
+          "materials": [
+            "/Game/NordicCastle/Materials/MI_WoodTrim01.MI_WoodTrim01"
+          ]
+        }
+      },
+      "cameraToCastRays": [
+        {
+          "targetUEcm": [
+            -42245.38598190036,
+            -45006.02750545656,
+            594.3731
+          ],
+          "clear": true,
+          "firstHit": null
+        },
+        {
+          "targetUEcm": [
+            -42245.38598190036,
+            -45006.02750545656,
+            674.3731
+          ],
+          "clear": true,
+          "firstHit": null
+        },
+        {
+          "targetUEcm": [
+            -42245.38598190036,
+            -45006.02750545656,
+            754.3731
+          ],
+          "clear": true,
+          "firstHit": null
+        },
+        {
+          "targetUEcm": [
+            -42383.0,
+            -44890.0,
+            594.3731
+          ],
+          "clear": true,
+          "firstHit": null
+        },
+        {
+          "targetUEcm": [
+            -42383.0,
+            -44890.0,
+            674.3731
+          ],
+          "clear": true,
+          "firstHit": null
+        },
+        {
+          "targetUEcm": [
+            -42383.0,
+            -44890.0,
+            754.3731
+          ],
+          "clear": true,
+          "firstHit": null
+        },
+        {
+          "targetUEcm": [
+            -42520.61401809964,
+            -44773.97249454344,
+            594.3731
+          ],
+          "clear": true,
+          "firstHit": null
+        },
+        {
+          "targetUEcm": [
+            -42520.61401809964,
+            -44773.97249454344,
+            674.3731
+          ],
+          "clear": true,
+          "firstHit": null
+        },
+        {
+          "targetUEcm": [
+            -42520.61401809964,
+            -44773.97249454344,
+            754.3731
+          ],
+          "clear": true,
+          "firstHit": null
+        }
+      ],
+      "cameraClearRayCount": 9,
+      "suggestedActorOffsets": [
+        {
+          "xyCm": [
+            -42483,
+            -44990
+          ],
+          "floorCm": 563.1586,
+          "offsetFlightM": [
+            -1.0,
+            0.027854933456250137,
+            -1.0
+          ],
+          "floorHit": {
+            "z": 563.158593345625,
+            "slopeDeg": 7.871404088081626e-06,
+            "record": 232,
+            "section": 0,
+            "triangle": 17
+          }
+        },
+        {
+          "xyCm": [
+            -42283,
+            -44990
+          ],
+          "floorCm": 559.9632,
+          "offsetFlightM": [
+            1.0,
+            -0.004098539120946043,
+            -1.0
+          ],
+          "floorHit": {
+            "z": 559.9632460879054,
+            "slopeDeg": 0.38773323749136385,
+            "record": 226,
+            "section": 0,
+            "triangle": 11
+          }
+        },
+        {
+          "xyCm": [
+            -42458,
+            -44790
+          ],
+          "floorCm": 563.1586,
+          "offsetFlightM": [
+            -0.75,
+            0.02785500875406001,
+            1.0
+          ],
+          "floorHit": {
+            "z": 563.158600875406,
+            "slopeDeg": 1.1164539134006841e-05,
+            "record": 233,
+            "section": 0,
+            "triangle": 67
+          }
+        },
+        {
+          "xyCm": [
+            -42308,
+            -44790
+          ],
+          "floorCm": 563.1586,
+          "offsetFlightM": [
+            0.75,
+            0.027855007169274585,
+            1.0
+          ],
+          "floorHit": {
+            "z": 563.1586007169275,
+            "slopeDeg": 7.871404088081626e-06,
+            "record": 233,
+            "section": 0,
+            "triangle": 17
+          }
+        }
+      ],
+      "bodyCheck": "At each recommended actor center: source-supported floor (or exact landscape), plus 12 vertical rays on a 35cm radius ring reject geometry from12cm to200cm above that floor. Not a replacement for engine collision/navigation.",
+      "architecturalEvidence": [
+        {
+          "distanceM": 0.0,
+          "record": 9
+        },
+        {
+          "distanceM": 0.0,
+          "record": 226
+        },
+        {
+          "distanceM": 0.0,
+          "record": 233
+        },
+        {
+          "distanceM": 0.13,
+          "record": 262
+        },
+        {
+          "distanceM": 0.18,
+          "record": 1008
+        },
+        {
+          "distanceM": 0.241,
+          "record": 1002
+        },
+        {
+          "distanceM": 0.389,
+          "record": 227
+        },
+        {
+          "distanceM": 0.518,
+          "record": 232
+        }
+      ],
+      "fixedPublicTravelPinUEcm": [
+        -41664,
+        -46015,
+        187
+      ],
+      "horizontalDistanceFromPinM": 13.351,
+      "recommendedFOVDegrees": 50,
+      "status": "Source geometry candidate; browser/native visual composition and motion checks still required."
+    },
+    {
+      "id": "market-edge-recommended",
+      "area": "cairnhold",
+      "actorAnchorUEcm": [
+        -10287.5,
+        54312.5,
+        4.0
+      ],
+      "eyeUEcm": [
+        -10737.5,
+        54912.5,
+        280.0
+      ],
+      "aimUEcm": [
+        -10287.5,
+        54312.5,
+        140.0
+      ],
+      "actorAnchorFlightM": [
+        -102.875,
+        0.04,
+        543.125
+      ],
+      "cameraEyeFlightM": [
+        -107.375,
+        2.8,
+        549.125
+      ],
+      "cameraAimFlightM": [
+        -102.875,
+        1.4,
+        543.125
+      ],
+      "obstacleSliceClearanceCm": 300.0,
+      "footprintTest": "nine exact vertical rays across a 4.0m x 4.0m cast footprint; terrain-level obstacle slice does not apply to raised floor candidates; not gameplay collision/navmesh proof",
+      "floorRangeCm": [
+        0.0,
+        0.0
+      ],
+      "samples": [
+        {
+          "xyCm": [
+            -10287.5,
+            54312.5
+          ],
+          "landscapeCm": 0.0,
+          "floorCm": 0.0,
+          "floorHit": null,
+          "overheadClearanceCm": 1477.254,
+          "overheadHit": {
+            "z": 1477.2539656987126,
+            "slopeDeg": 34.99263152100286,
+            "record": 274,
+            "section": 1,
+            "triangle": 5211
+          }
+        },
+        {
+          "xyCm": [
+            -10487.5,
+            54112.5
+          ],
+          "landscapeCm": 0.0,
+          "floorCm": 0.0,
+          "floorHit": null,
+          "overheadClearanceCm": 1972.318,
+          "overheadHit": {
+            "z": 1972.3180497422309,
+            "slopeDeg": 77.8095145307635,
+            "record": 274,
+            "section": 1,
+            "triangle": 748
+          }
+        },
+        {
+          "xyCm": [
+            -10287.5,
+            54112.5
+          ],
+          "landscapeCm": 0.0,
+          "floorCm": 0.0,
+          "floorHit": null,
+          "overheadClearanceCm": 1454.166,
+          "overheadHit": {
+            "z": 1454.1661094255533,
+            "slopeDeg": 27.52058461407647,
+            "record": 274,
+            "section": 1,
+            "triangle": 5214
+          }
+        },
+        {
+          "xyCm": [
+            -10087.5,
+            54112.5
+          ],
+          "landscapeCm": 0.0,
+          "floorCm": 0.0,
+          "floorHit": null,
+          "overheadClearanceCm": null,
+          "overheadHit": null
+        },
+        {
+          "xyCm": [
+            -10487.5,
+            54312.5
+          ],
+          "landscapeCm": 0.0,
+          "floorCm": 0.0,
+          "floorHit": null,
+          "overheadClearanceCm": 1852.27,
+          "overheadHit": {
+            "z": 1852.2696904216168,
+            "slopeDeg": 6.652498838711964,
+            "record": 274,
+            "section": 1,
+            "triangle": 5318
+          }
+        },
+        {
+          "xyCm": [
+            -10087.5,
+            54312.5
+          ],
+          "landscapeCm": 0.0,
+          "floorCm": 0.0,
+          "floorHit": null,
+          "overheadClearanceCm": null,
+          "overheadHit": null
+        },
+        {
+          "xyCm": [
+            -10487.5,
+            54512.5
+          ],
+          "landscapeCm": 0.0,
+          "floorCm": 0.0,
+          "floorHit": null,
+          "overheadClearanceCm": 1866.876,
+          "overheadHit": {
+            "z": 1866.8760209071927,
+            "slopeDeg": 32.76172004241255,
+            "record": 274,
+            "section": 1,
+            "triangle": 5329
+          }
+        },
+        {
+          "xyCm": [
+            -10287.5,
+            54512.5
+          ],
+          "landscapeCm": 0.0,
+          "floorCm": 0.0,
+          "floorHit": null,
+          "overheadClearanceCm": 1584.021,
+          "overheadHit": {
+            "z": 1584.0209067925746,
+            "slopeDeg": 13.132784621896294,
+            "record": 274,
+            "section": 1,
+            "triangle": 5222
+          }
+        },
+        {
+          "xyCm": [
+            -10087.5,
+            54512.5
+          ],
+          "landscapeCm": 0.0,
+          "floorCm": 0.0,
+          "floorHit": null,
+          "overheadClearanceCm": 1575.605,
+          "overheadHit": {
+            "z": 1575.6053614270902,
+            "slopeDeg": 16.990632225023095,
+            "record": 274,
+            "section": 1,
+            "triangle": 692
+          }
+        }
+      ],
+      "settingRecordIndices": [
+        254,
+        266,
+        274,
+        221,
+        131,
+        1286,
+        168,
+        54
+      ],
+      "records": {
+        "54": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScan01",
+          "line": 5486,
+          "transformIndex": 44,
+          "mesh": "0f0c6072d5e76136335c",
+          "asset": "/Game/Brushify/Meshes/Foliage/Trees/Cedar/S_Cedar_Large.S_Cedar_Large",
+          "actor": "/Game/Maps/L_EclipsedRealms_OpenWorldMap.L_EclipsedRealms_OpenWorldMap:PersistentLevel.PCGPartitionGridActor_51200_-1_1",
+          "component": "/Game/Maps/L_EclipsedRealms_OpenWorldMap.L_EclipsedRealms_OpenWorldMap:PersistentLevel.PCGPartitionGridActor_51200_-1_1.ISM_S_Cedar_Large_0",
+          "transform": [
+            -9587.4509,
+            55132.5718,
+            0.0,
+            0.0,
+            0.0,
+            -0.6480261,
+            0.7616181,
+            1.0552459,
+            1.0552459,
+            1.0552459
+          ],
+          "boundsCm": [
+            [
+              -10019.06035146231,
+              54658.35476935624,
+              -0.5714197769042357
+            ],
+            [
+              -9150.142233127008,
+              55538.275244540855,
+              2024.4092655338013
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanMeshRepairs01\\meshes\\0f0c6072d5e76136335c.json",
+          "materials": [
+            "/Game/Brushify/Meshes/Foliage/Trees/Cedar/Materials/Green/MI_CedarBark.MI_CedarBark",
+            "/Game/Brushify/Meshes/Foliage/Trees/Cedar/Materials/Green/MI_CedarLeaves.MI_CedarLeaves"
+          ]
+        },
+        "131": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScan01",
+          "line": 5487,
+          "transformIndex": 246,
+          "mesh": "0f0c6072d5e76136335c",
+          "asset": "/Game/Brushify/Meshes/Foliage/Trees/Cedar/S_Cedar_Large.S_Cedar_Large",
+          "actor": "/Game/Maps/L_EclipsedRealms_OpenWorldMap.L_EclipsedRealms_OpenWorldMap:PersistentLevel.PCGPartitionGridActor_51200_-1_1",
+          "component": "/Game/Maps/L_EclipsedRealms_OpenWorldMap.L_EclipsedRealms_OpenWorldMap:PersistentLevel.PCGPartitionGridActor_51200_-1_1.ISM_S_Cedar_Large_0",
+          "transform": [
+            -10675.325,
+            53586.0063,
+            0.0,
+            0.0,
+            0.0,
+            -0.5262155,
+            0.8503512,
+            1.4376757,
+            1.4376757,
+            1.4376757
+          ],
+          "boundsCm": [
+            [
+              -11352.055930065488,
+              52844.22334948654,
+              -0.77850700747058
+            ],
+            [
+              -9963.44438156405,
+              54240.96878509061,
+              2758.071846488855
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanMeshRepairs01\\meshes\\0f0c6072d5e76136335c.json",
+          "materials": [
+            "/Game/Brushify/Meshes/Foliage/Trees/Cedar/Materials/Green/MI_CedarBark.MI_CedarBark",
+            "/Game/Brushify/Meshes/Foliage/Trees/Cedar/Materials/Green/MI_CedarLeaves.MI_CedarLeaves"
+          ]
+        },
+        "168": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScan01",
+          "line": 5488,
+          "transformIndex": 134,
+          "mesh": "0f0c6072d5e76136335c",
+          "asset": "/Game/Brushify/Meshes/Foliage/Trees/Cedar/S_Cedar_Large.S_Cedar_Large",
+          "actor": "/Game/Maps/L_EclipsedRealms_OpenWorldMap.L_EclipsedRealms_OpenWorldMap:PersistentLevel.PCGPartitionGridActor_51200_-1_1",
+          "component": "/Game/Maps/L_EclipsedRealms_OpenWorldMap.L_EclipsedRealms_OpenWorldMap:PersistentLevel.PCGPartitionGridActor_51200_-1_1.ISM_S_Cedar_Large_0",
+          "transform": [
+            -10355.8899,
+            55379.0085,
+            0.0,
+            0.0,
+            0.0,
+            -0.3190922,
+            0.9477237,
+            1.4298781,
+            1.4298781,
+            1.4298781
+          ],
+          "boundsCm": [
+            [
+              -11045.535687191925,
+              54625.32754565064,
+              -0.7742845766113078
+            ],
+            [
+              -9596.661931800292,
+              56070.748316478275,
+              2743.112741991101
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanMeshRepairs01\\meshes\\0f0c6072d5e76136335c.json",
+          "materials": [
+            "/Game/Brushify/Meshes/Foliage/Trees/Cedar/Materials/Green/MI_CedarBark.MI_CedarBark",
+            "/Game/Brushify/Meshes/Foliage/Trees/Cedar/Materials/Green/MI_CedarLeaves.MI_CedarLeaves"
+          ]
+        },
+        "221": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScan01",
+          "line": 5491,
+          "transformIndex": 3,
+          "mesh": "75a7d29abf7064e914af",
+          "asset": "/Game/Brushify/Meshes/Foliage/Trees/Maple/S_Maple_Large.S_Maple_Large",
+          "actor": "/Game/Maps/L_EclipsedRealms_OpenWorldMap.L_EclipsedRealms_OpenWorldMap:PersistentLevel.PCGPartitionGridActor_51200_-1_1",
+          "component": "/Game/Maps/L_EclipsedRealms_OpenWorldMap.L_EclipsedRealms_OpenWorldMap:PersistentLevel.PCGPartitionGridActor_51200_-1_1.ISM_S_Maple_Large_0",
+          "transform": [
+            -11111.241,
+            55256.1859,
+            0.0,
+            0.0,
+            0.0,
+            0.3651159,
+            0.9309621,
+            1.1221609,
+            1.1221609,
+            1.1221609
+          ],
+          "boundsCm": [
+            [
+              -11988.378649555063,
+              54339.83256140069,
+              -37.93594233959959
+            ],
+            [
+              -10186.345761389115,
+              56138.15178503888,
+              1778.5937944827633
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanMeshRepairs01\\meshes\\75a7d29abf7064e914af.json",
+          "materials": [
+            "/Game/Brushify/Meshes/Foliage/Trees/Maple/Materials/Green/MI_MapleBark.MI_MapleBark",
+            "/Game/Brushify/Meshes/Foliage/Trees/Maple/Materials/Green/MI_MapleLeaves.MI_MapleLeaves",
+            "/Game/Brushify/Meshes/Foliage/Trees/Maple/Materials/Green/MI_MapleTrunk.MI_MapleTrunk"
+          ]
+        },
+        "254": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScan01",
+          "line": 5504,
+          "transformIndex": 11,
+          "mesh": "6ae7d5c890b3ac48d473",
+          "asset": "/Game/NordicConiferBiome/Meshes/Trees/Tree_Fir_L_01/SM_Tree_Fir_01.SM_Tree_Fir_01",
+          "actor": "/Game/Maps/L_EclipsedRealms_OpenWorldMap.L_EclipsedRealms_OpenWorldMap:PersistentLevel.PCGPartitionGridActor_51200_-1_1",
+          "component": "/Game/Maps/L_EclipsedRealms_OpenWorldMap.L_EclipsedRealms_OpenWorldMap:PersistentLevel.PCGPartitionGridActor_51200_-1_1.ISM_SM_Tree_Fir_01_0",
+          "transform": [
+            -11004.5022,
+            53891.9166,
+            0.0,
+            0.0,
+            0.0,
+            -0.294808,
+            0.9555565,
+            1.2003243,
+            1.2003243,
+            1.2003243
+          ],
+          "boundsCm": [
+            [
+              -11787.746602833324,
+              53040.623791057296,
+              -72.11968039028307
+            ],
+            [
+              -10185.103519798298,
+              54647.76158311259,
+              2639.0876301131834
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanMeshRepairs02\\meshes\\6ae7d5c890b3ac48d473.json",
+          "materials": [
+            "/Game/NordicConiferBiome/Meshes/Trees/Tree_Fir_L_01/MI_Tree_Fir_01_Bark.MI_Tree_Fir_01_Bark",
+            "/Game/NordicConiferBiome/Meshes/Trees/Tree_Fir_L_01/MI_Fir_01_Branches.MI_Fir_01_Branches",
+            "/Game/NordicConiferBiome/Meshes/Trees/Tree_Fir_L_01/Billboard/MI_Tree_Fir_01_Billboard.MI_Tree_Fir_01_Billboard",
+            "/Game/NordicConiferBiome/Meshes/Trees/TreeShroom_01/MI_TreeShroom_01.MI_TreeShroom_01"
+          ]
+        },
+        "266": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScan01",
+          "line": 5508,
+          "transformIndex": 1,
+          "mesh": "e952d96db3df917e969e",
+          "asset": "/Game/NordicConiferBiome/Meshes/Trees/Tree_Fir_Fallen_01/SM_Tree_Fir_Fallen_01.SM_Tree_Fir_Fallen_01",
+          "actor": "/Game/Maps/L_EclipsedRealms_OpenWorldMap.L_EclipsedRealms_OpenWorldMap:PersistentLevel.PCGPartitionGridActor_51200_-1_1",
+          "component": "/Game/Maps/L_EclipsedRealms_OpenWorldMap.L_EclipsedRealms_OpenWorldMap:PersistentLevel.PCGPartitionGridActor_51200_-1_1.ISM_SM_Tree_Fir_Fallen_01_0",
+          "transform": [
+            -10122.134,
+            53275.3599,
+            -13.7737,
+            0.0027619,
+            -0.0002474,
+            -0.6412057,
+            0.767364,
+            1.2159288,
+            1.2159288,
+            1.2159288
+          ],
+          "boundsCm": [
+            [
+              -10394.18205934144,
+              52691.63369294964,
+              -249.53159321946663
+            ],
+            [
+              -5874.679048946113,
+              54460.518478880396,
+              393.1253763735893
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanMeshRepairs02\\meshes\\e952d96db3df917e969e.json",
+          "materials": [
+            "/Game/NordicConiferBiome/Meshes/Trees/Tree_Fir_Fallen_01/MI_Tree_Fir_Fallen_01_Bark.MI_Tree_Fir_Fallen_01_Bark",
+            "/Game/NordicConiferBiome/Meshes/Trees/Tree_Fir_Fallen_01/MI_Tree_Fir_Fallen_01_Branches.MI_Tree_Fir_Fallen_01_Branches"
+          ]
+        },
+        "274": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScan01",
+          "line": 5516,
+          "transformIndex": 4,
+          "mesh": "6fd69a77d9dd67ec0ba4",
+          "asset": "/Game/NordicConiferBiome/Meshes/Trees/Tree_RedPine_L_01/SM_Tree_RedPine_L_01.SM_Tree_RedPine_L_01",
+          "actor": "/Game/Maps/L_EclipsedRealms_OpenWorldMap.L_EclipsedRealms_OpenWorldMap:PersistentLevel.PCGPartitionGridActor_51200_-1_1",
+          "component": "/Game/Maps/L_EclipsedRealms_OpenWorldMap.L_EclipsedRealms_OpenWorldMap:PersistentLevel.PCGPartitionGridActor_51200_-1_1.ISM_SM_Tree_RedPine_L_01_0",
+          "transform": [
+            -10984.0013,
+            54443.6079,
+            0.0,
+            0.0,
+            0.0,
+            0.576582,
+            0.8170393,
+            1.308562,
+            1.308562,
+            1.308562
+          ],
+          "boundsCm": [
+            [
+              -12136.565125418356,
+              53357.06036162055,
+              -6.801583247070312
+            ],
+            [
+              -9774.833730656452,
+              55578.96592879543,
+              3126.9753445083006
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanMeshRepairs02\\meshes\\6fd69a77d9dd67ec0ba4.json",
+          "materials": [
+            "/Game/NordicConiferBiome/Meshes/Trees/Tree_RedPine_L_01/MI_Tree_RedPine_L_01_Bark.MI_Tree_RedPine_L_01_Bark",
+            "/Game/NordicConiferBiome/Meshes/Trees/Tree_RedPine_L_01/MI_Tree_RedPine_L_01_Branches.MI_Tree_RedPine_L_01_Branches",
+            "/Game/NordicConiferBiome/Meshes/Trees/Tree_RedPine_L_01/Billboard/MI_Tree_RedPine_L_01_Billboard.MI_Tree_RedPine_L_01_Billboard"
+          ]
+        },
+        "1286": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 10978,
+          "transformIndex": 0,
+          "mesh": "e4d36c30c7554f42548e",
+          "asset": "/Game/kb3d_enchanted/StaticMeshes/SM_KB3D_ENC_PropTree_C.SM_KB3D_ENC_PropTree_C",
+          "actor": "/Game/kb3d_enchanted/Levels/KB3D_ENC_BldgSmUpperTownSquare_A_Modified.KB3D_ENC_BldgSmUpperTownSquare_A_Modified:PersistentLevel.BP_KB3D_ENC_PropTree_C_C_0",
+          "component": "/Game/kb3d_enchanted/Levels/KB3D_ENC_BldgSmUpperTownSquare_A_Modified.KB3D_ENC_BldgSmUpperTownSquare_A_Modified:PersistentLevel.BP_KB3D_ENC_PropTree_C_C_0.InstancedStaticMesh",
+          "transform": [
+            -9777.13813976376,
+            54286.48256589245,
+            0.9360060000000008,
+            0.0,
+            0.0,
+            -0.766044443118978,
+            0.6427876096865394,
+            0.631917,
+            0.631917,
+            0.631917
+          ],
+          "boundsCm": [
+            [
+              -10131.64620900755,
+              53951.64249013766,
+              1.0375311120682227
+            ],
+            [
+              -9435.698189932906,
+              54606.67262817739,
+              837.4357490584716
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\e4d36c30c7554f42548e.json",
+          "materials": [
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_WoodBarkB.MI_KB3D_ENC_WoodBarkB",
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_CarolinaCherryBranch.MI_KB3D_ENC_CarolinaCherryBranch"
+          ]
+        },
+        "1288": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 10980,
+          "transformIndex": 0,
+          "mesh": "2b61e9fefe0989eb2e12",
+          "asset": "/Game/kb3d_enchanted/StaticMeshes/SM_KB3D_ENC_BldgSmUpperTownSquare_Stones_A.SM_KB3D_ENC_BldgSmUpperTownSquare_Stones_A",
+          "actor": "/Game/kb3d_enchanted/Levels/KB3D_ENC_BldgSmUpperTownSquare_A_Modified.KB3D_ENC_BldgSmUpperTownSquare_A_Modified:PersistentLevel.StaticMeshActor_19",
+          "component": "/Game/kb3d_enchanted/Levels/KB3D_ENC_BldgSmUpperTownSquare_A_Modified.KB3D_ENC_BldgSmUpperTownSquare_A_Modified:PersistentLevel.StaticMeshActor_19.StaticMeshComponent0",
+          "transform": [
+            -8412.553920352775,
+            54549.971187131014,
+            -8.901193999999998,
+            0.0,
+            0.0,
+            -0.766044443118978,
+            0.6427876096865394,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "boundsCm": [
+            [
+              -10365.894531393478,
+              52594.22584089533,
+              -8.901193999999998
+            ],
+            [
+              -6459.214157790539,
+              56505.715939255686,
+              10.446525192504884
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\2b61e9fefe0989eb2e12.json",
+          "materials": [
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_RocksA.MI_KB3D_ENC_RocksA"
+          ]
+        },
+        "1857": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 11532,
+          "transformIndex": 0,
+          "mesh": "392d9e24abd603c5ac57",
+          "asset": "/Game/kb3d_enchanted/StaticMeshes/SM_KB3D_ENC_BldgMdAntiquarian_Stones_A.SM_KB3D_ENC_BldgMdAntiquarian_Stones_A",
+          "actor": "/Game/kb3d_enchanted/Levels/KB3D_ENC_BldgMdAntiquarian_A_Modified.KB3D_ENC_BldgMdAntiquarian_A_Modified:PersistentLevel.StaticMeshActor_40",
+          "component": "/Game/kb3d_enchanted/Levels/KB3D_ENC_BldgMdAntiquarian_A_Modified.KB3D_ENC_BldgMdAntiquarian_A_Modified:PersistentLevel.StaticMeshActor_40.StaticMeshComponent0",
+          "transform": [
+            -11428.327863471137,
+            54895.24705109471,
+            -8.148494000000001,
+            0.0,
+            0.0,
+            -0.0871557514410969,
+            0.9961946973311682,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "boundsCm": [
+            [
+              -12713.10795566643,
+              53456.6226361512,
+              -8.148494000000001
+            ],
+            [
+              -10143.548492570582,
+              56333.87159322196,
+              13.422062640624999
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\392d9e24abd603c5ac57.json",
+          "materials": [
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_RocksA.MI_KB3D_ENC_RocksA"
+          ]
+        },
+        "1192": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 10886,
+          "transformIndex": 0,
+          "mesh": "e09486c8ca7354be9089",
+          "asset": "/Game/kb3d_enchanted/StaticMeshes/SM_KB3D_ENC_BldgSmUpperTownSquare_Planter_C.SM_KB3D_ENC_BldgSmUpperTownSquare_Planter_C",
+          "actor": "/Game/kb3d_enchanted/Levels/KB3D_ENC_BldgSmUpperTownSquare_A_Modified.KB3D_ENC_BldgSmUpperTownSquare_A_Modified:PersistentLevel.StaticMeshActor_9",
+          "component": "/Game/kb3d_enchanted/Levels/KB3D_ENC_BldgSmUpperTownSquare_A_Modified.KB3D_ENC_BldgSmUpperTownSquare_A_Modified:PersistentLevel.StaticMeshActor_9.StaticMeshComponent0",
+          "transform": [
+            -9722.152458006265,
+            54249.61967227294,
+            -7.529793999999999,
+            0.0,
+            0.0,
+            -0.766044443118978,
+            0.6427876096865394,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "boundsCm": [
+            [
+              -10074.798629918383,
+              53825.05208216115,
+              -7.529794476837157
+            ],
+            [
+              -9369.50966970285,
+              54674.187053308844,
+              44.196280218750005
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\e09486c8ca7354be9089.json",
+          "materials": [
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_GrassyGroundB.MI_KB3D_ENC_GrassyGroundB",
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_StoneGrayDark.MI_KB3D_ENC_StoneGrayDark",
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_StoneGrayMossy.MI_KB3D_ENC_StoneGrayMossy"
+          ]
+        },
+        "1683": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 11366,
+          "transformIndex": 0,
+          "mesh": "ea69d37ef21ee0631bf2",
+          "asset": "/Game/kb3d_enchanted/StaticMeshes/SM_KB3D_ENC_BldgMdAntiquarian_Archway_A_Stone.SM_KB3D_ENC_BldgMdAntiquarian_Archway_A_Stone",
+          "actor": "/Game/kb3d_enchanted/Levels/KB3D_ENC_BldgMdAntiquarian_A_Modified.KB3D_ENC_BldgMdAntiquarian_A_Modified:PersistentLevel.StaticMeshActor_1",
+          "component": "/Game/kb3d_enchanted/Levels/KB3D_ENC_BldgMdAntiquarian_A_Modified.KB3D_ENC_BldgMdAntiquarian_A_Modified:PersistentLevel.StaticMeshActor_1.StaticMeshComponent0",
+          "transform": [
+            -11290.611667067233,
+            55299.07432712868,
+            -6.155794,
+            0.0,
+            0.0,
+            -0.0871557514410969,
+            0.9961946973311682,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "boundsCm": [
+            [
+              -11952.547996078292,
+              54616.71600219102,
+              -6.155794000000014
+            ],
+            [
+              -10678.838378654587,
+              55935.79475777683,
+              420.20953192773436
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\ea69d37ef21ee0631bf2.json",
+          "materials": [
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_StoneGrayLightB.MI_KB3D_ENC_StoneGrayLightB",
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_MetalForgedGrayA.MI_KB3D_ENC_MetalForgedGrayA",
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_MetalForgedBlackRustedA.MI_KB3D_ENC_MetalForgedBlackRustedA"
+          ]
+        },
+        "1775": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 11458,
+          "transformIndex": 0,
+          "mesh": "ff9e63483009a2e1f295",
+          "asset": "/Game/kb3d_enchanted/StaticMeshes/SM_KB3D_ENC_BldgMdAntiquarian_Roof_A.SM_KB3D_ENC_BldgMdAntiquarian_Roof_A",
+          "actor": "/Game/kb3d_enchanted/Levels/KB3D_ENC_BldgMdAntiquarian_A_Modified.KB3D_ENC_BldgMdAntiquarian_A_Modified:PersistentLevel.StaticMeshActor_20",
+          "component": "/Game/kb3d_enchanted/Levels/KB3D_ENC_BldgMdAntiquarian_A_Modified.KB3D_ENC_BldgMdAntiquarian_A_Modified:PersistentLevel.StaticMeshActor_20.StaticMeshComponent0",
+          "transform": [
+            -11290.611667067233,
+            55299.07432712868,
+            496.043706,
+            0.0,
+            0.0,
+            -0.0871557514410969,
+            0.9961946973311682,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "boundsCm": [
+            [
+              -12137.713176323216,
+              54432.82437272264,
+              463.26105600610344
+            ],
+            [
+              -10443.509988232936,
+              56165.325243261024,
+              1352.2497606875
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\ff9e63483009a2e1f295.json",
+          "materials": [
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_WoodOldWornBrightA.MI_KB3D_ENC_WoodOldWornBrightA",
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_WoodOldWornBrownBDamaged.MI_KB3D_ENC_WoodOldWornBrownBDamaged",
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_WoodHeartwoodAtlas.MI_KB3D_ENC_WoodHeartwoodAtlas",
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_WoodOldWornBrownA.MI_KB3D_ENC_WoodOldWornBrownA",
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_SlateDB.MI_KB3D_ENC_SlateDB"
+          ]
+        },
+        "1700": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 11383,
+          "transformIndex": 0,
+          "mesh": "bab3beda5f0f04e5b583",
+          "asset": "/Game/kb3d_enchanted/StaticMeshes/SM_KB3D_ENC_BldgMdAntiquarian_Planter_B.SM_KB3D_ENC_BldgMdAntiquarian_Planter_B",
+          "actor": "/Game/kb3d_enchanted/Levels/KB3D_ENC_BldgMdAntiquarian_A_Modified.KB3D_ENC_BldgMdAntiquarian_A_Modified:PersistentLevel.StaticMeshActor_18",
+          "component": "/Game/kb3d_enchanted/Levels/KB3D_ENC_BldgMdAntiquarian_A_Modified.KB3D_ENC_BldgMdAntiquarian_A_Modified:PersistentLevel.StaticMeshActor_18.StaticMeshComponent0",
+          "transform": [
+            -10788.764239713299,
+            54741.40274111303,
+            -0.22569400000000073,
+            0.0,
+            0.0,
+            -0.0871557514410969,
+            0.9961946973311682,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "boundsCm": [
+            [
+              -10883.652145693453,
+              54624.25681299684,
+              -0.22569400000000073
+            ],
+            [
+              -10693.876480789339,
+              54858.54783523218,
+              9.8549305803833
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\bab3beda5f0f04e5b583.json",
+          "materials": [
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_GrassyGroundA.MI_KB3D_ENC_GrassyGroundA",
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_StoneGrayTrim.MI_KB3D_ENC_StoneGrayTrim"
+          ]
+        },
+        "1682": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 11365,
+          "transformIndex": 0,
+          "mesh": "f58561fd871bb9db0492",
+          "asset": "/Game/kb3d_enchanted/StaticMeshes/SM_KB3D_ENC_BldgMdAntiquarian_Archway_A_Brick.SM_KB3D_ENC_BldgMdAntiquarian_Archway_A_Brick",
+          "actor": "/Game/kb3d_enchanted/Levels/KB3D_ENC_BldgMdAntiquarian_A_Modified.KB3D_ENC_BldgMdAntiquarian_A_Modified:PersistentLevel.StaticMeshActor_0",
+          "component": "/Game/kb3d_enchanted/Levels/KB3D_ENC_BldgMdAntiquarian_A_Modified.KB3D_ENC_BldgMdAntiquarian_A_Modified:PersistentLevel.StaticMeshActor_0.StaticMeshComponent0",
+          "transform": [
+            -11290.611667067233,
+            55299.07432712868,
+            -6.155794,
+            0.0,
+            0.0,
+            -0.0871557514410969,
+            0.9961946973311682,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "boundsCm": [
+            [
+              -11937.321252045693,
+              54651.27265895377,
+              -0.3323076718750144
+            ],
+            [
+              -10691.816368474507,
+              55924.95325680855,
+              448.3235761171875
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\f58561fd871bb9db0492.json",
+          "materials": [
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_TerracottaTile.MI_KB3D_ENC_TerracottaTile",
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_CobblestoneFloor.MI_KB3D_ENC_CobblestoneFloor",
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_BricksStoneOldGradient.MI_KB3D_ENC_BricksStoneOldGradient",
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_BricksStoneOld.MI_KB3D_ENC_BricksStoneOld",
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_BricksStoneOldTop.MI_KB3D_ENC_BricksStoneOldTop"
+          ]
+        },
+        "1694": {
+          "rawRoot": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete",
+          "line": 11377,
+          "transformIndex": 0,
+          "mesh": "589fe62385f530f0a40a",
+          "asset": "/Game/kb3d_enchanted/StaticMeshes/SM_KB3D_ENC_BldgMdAntiquarian_Floor_B.SM_KB3D_ENC_BldgMdAntiquarian_Floor_B",
+          "actor": "/Game/kb3d_enchanted/Levels/KB3D_ENC_BldgMdAntiquarian_A_Modified.KB3D_ENC_BldgMdAntiquarian_A_Modified:PersistentLevel.StaticMeshActor_12",
+          "component": "/Game/kb3d_enchanted/Levels/KB3D_ENC_BldgMdAntiquarian_A_Modified.KB3D_ENC_BldgMdAntiquarian_A_Modified:PersistentLevel.StaticMeshActor_12.StaticMeshComponent0",
+          "transform": [
+            -11325.825165393204,
+            55290.09913417215,
+            417.958806,
+            0.0,
+            0.0,
+            -0.0871557514410969,
+            0.9961946973311682,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "boundsCm": [
+            [
+              -12006.387044712137,
+              54584.76301140588,
+              417.89538665795897
+            ],
+            [
+              -10552.282853266286,
+              56009.98707095642,
+              463.47610946679686
+            ]
+          ],
+          "sourceMeta": "D:\\EclipsedRealmWebsiteScan\\LayerScanNestedComplete\\meshes\\589fe62385f530f0a40a.json",
+          "materials": [
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_WoodHeartwoodAtlas.MI_KB3D_ENC_WoodHeartwoodAtlas",
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_WoodOldWornBrownBDamaged.MI_KB3D_ENC_WoodOldWornBrownBDamaged",
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_WoodOldWornBrownA.MI_KB3D_ENC_WoodOldWornBrownA",
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_MetalForgedGrayA.MI_KB3D_ENC_MetalForgedGrayA",
+            "/Game/kb3d_enchanted/Materials/MI_KB3D_ENC_TerracottaTile.MI_KB3D_ENC_TerracottaTile"
+          ]
+        }
+      },
+      "cameraToCastRays": [
+        {
+          "targetUEcm": [
+            -10431.5,
+            54204.5,
+            34.0
+          ],
+          "clear": true,
+          "firstHit": null
+        },
+        {
+          "targetUEcm": [
+            -10431.5,
+            54204.5,
+            114.0
+          ],
+          "clear": true,
+          "firstHit": null
+        },
+        {
+          "targetUEcm": [
+            -10431.5,
+            54204.5,
+            194.0
+          ],
+          "clear": true,
+          "firstHit": null
+        },
+        {
+          "targetUEcm": [
+            -10287.5,
+            54312.5,
+            34.0
+          ],
+          "clear": true,
+          "firstHit": null
+        },
+        {
+          "targetUEcm": [
+            -10287.5,
+            54312.5,
+            114.0
+          ],
+          "clear": true,
+          "firstHit": null
+        },
+        {
+          "targetUEcm": [
+            -10287.5,
+            54312.5,
+            194.0
+          ],
+          "clear": true,
+          "firstHit": null
+        },
+        {
+          "targetUEcm": [
+            -10143.5,
+            54420.5,
+            34.0
+          ],
+          "clear": true,
+          "firstHit": null
+        },
+        {
+          "targetUEcm": [
+            -10143.5,
+            54420.5,
+            114.0
+          ],
+          "clear": true,
+          "firstHit": null
+        },
+        {
+          "targetUEcm": [
+            -10143.5,
+            54420.5,
+            194.0
+          ],
+          "clear": true,
+          "firstHit": null
+        }
+      ],
+      "cameraClearRayCount": 9,
+      "suggestedActorOffsets": [
+        {
+          "xyCm": [
+            -10387.5,
+            54212.5
+          ],
+          "floorCm": 0.0,
+          "offsetFlightM": [
+            -1.0,
+            0.0,
+            -1.0
+          ],
+          "floorHit": null
+        },
+        {
+          "xyCm": [
+            -10187.5,
+            54262.5
+          ],
+          "floorCm": 0.0,
+          "offsetFlightM": [
+            1.0,
+            0.0,
+            -0.5
+          ],
+          "floorHit": null
+        },
+        {
+          "xyCm": [
+            -10362.5,
+            54412.5
+          ],
+          "floorCm": 0.0,
+          "offsetFlightM": [
+            -0.75,
+            0.0,
+            1.0
+          ],
+          "floorHit": null
+        },
+        {
+          "xyCm": [
+            -10212.5,
+            54412.5
+          ],
+          "floorCm": 0.0,
+          "offsetFlightM": [
+            0.75,
+            0.0,
+            1.0
+          ],
+          "floorHit": null
+        }
+      ],
+      "bodyCheck": "At each recommended actor center: source-supported floor (or exact landscape), plus 12 vertical rays on a 35cm radius ring reject geometry from12cm to200cm above that floor. Not a replacement for engine collision/navigation.",
+      "architecturalEvidence": [
+        {
+          "distanceM": 0.0,
+          "record": 1288
+        },
+        {
+          "distanceM": 0.0,
+          "record": 1857
+        },
+        {
+          "distanceM": 2.127,
+          "record": 1192
+        },
+        {
+          "distanceM": 4.957,
+          "record": 1683
+        },
+        {
+          "distanceM": 5.034,
+          "record": 1775
+        },
+        {
+          "distanceM": 5.122,
+          "record": 1700
+        },
+        {
+          "distanceM": 5.275,
+          "record": 1682
+        },
+        {
+          "distanceM": 5.647,
+          "record": 1694
+        }
+      ],
+      "fixedPublicTravelPinUEcm": [
+        -15939.554659374779,
+        27906.656898579717,
+        87
+      ],
+      "horizontalDistanceFromPinM": 270.04,
+      "recommendedFOVDegrees": 50,
+      "status": "Source geometry candidate; browser/native visual composition and motion checks still required."
+    }
+  ]
+}

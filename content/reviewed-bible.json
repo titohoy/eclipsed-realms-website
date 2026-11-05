@@ -1,6 +1,6 @@
 {
-  "reviewedAt": "2026-11-03T01:57:18.380Z",
-  "digest": "7aa69aa85286f29ee5f1190bc331378388894e0838612b27f9ead219d422359e",
+  "reviewedAt": "2026-11-03T03:44:21.116Z",
+  "digest": "c0ce86124835bff80381f5841b823b67f5f814b1b8b9b455cc82ca2b57d973fe",
   "sources": {
     "Atlas/data/SCHEMA.md": "33b8cf552a3a676351d21e1540bcafa61a9dab034e2291fbbbdb448acfc2082f",
     "Atlas/data/categories.js": "7628e5a5488fd65a486219fea033aafd6a8bee55343ad34d0a31a16ca8a88d9a",
@@ -68,6 +68,7 @@
     "Docs/NarrativeReview/web/storyboard.mjs": "1a34f63f746ba33988f5e4f14cbdd7a3599e0c6edd8768c759d2d274eb9e7572",
     "Docs/NarrativeReview/web/style.css": "5794c04a2b7c3e5c5dfe882c0dbb3a819c4dc57d47b18d590eca2c1c11492c68",
     "Docs/NarrativeReview/web/workbench.html": "608cf1768adc95f0211ae4b8ecb3c9057916510230456415a65a466b4f0000f3",
-    "reviewed-open-world-cartography": "e030362c620f5ea1c5e15a0a283f4dc1a08595c3aa476ec9c2ef45070fd2dd63"
+    "reviewed-open-world-cartography": "e030362c620f5ea1c5e15a0a283f4dc1a08595c3aa476ec9c2ef45070fd2dd63",
+    "reviewed-3d-world-and-cast": "1f9f5082ecc8066f51acd806dc87e0c4fd88243626124a4a213d4cd71758094b"
   }
 }

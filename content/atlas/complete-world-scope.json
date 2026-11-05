@@ -1,0 +1,43 @@
+{
+  "success": true,
+  "trainingArenaExcluded": true,
+  "completeDescriptorCoverage": true,
+  "includedLayers": 179,
+  "excludedLayers": [
+    "/Game/DataLayers/World/DL_TrainingArena.DL_TrainingArena"
+  ],
+  "missingRootCount": 0,
+  "expectedRoots": 16073,
+  "observedRoots": 16073,
+  "expectedNested": 109951,
+  "observedNested": 109951,
+  "includedDescriptors": 126024,
+  "excludedDescriptors": 6307,
+  "totalDescriptors": 132331,
+  "intendedBatches": 200,
+  "completedBatches": 200,
+  "nestedWorldsVerified": 61,
+  "sourcePlacements": 426458,
+  "collectedInstances": 426458,
+  "inputs": {
+    "LayerScan01": {
+      "placements": 57158,
+      "excludedDescriptorHits": 0,
+      "elevatedVerificationVolumeHits": 0,
+      "placementSHA256": "4822e10daf61816e750469438d16d258f28e78c50cd0d641a72de54d27243ef2",
+      "collectorSHA256": "61fde88abe228c8374ec5658baf84484da34c54c0fe4d9f7281021fb3d0ec9a2",
+      "scopeSHA256": "9f5cdadf1a70fa8a482f9f491c7929ec9cceead4fec1787b919d9666b4c6afd1"
+    },
+    "LayerScanNestedComplete": {
+      "placements": 369300,
+      "excludedDescriptorHits": 0,
+      "elevatedVerificationVolumeHits": 0,
+      "placementSHA256": "c6e163b3c2c06dda72083623ceb48f207e4e419a326417274a456c114d1b731c",
+      "collectorSHA256": "914f557fb2bff26ac9f35384595e69f9793c3e495c1415bc8248128b782e6836",
+      "scopeSHA256": "d53f4f4124709227be6730b6a7c5e595c973587eb53eb63252188ffb80afdc64"
+    }
+  },
+  "withheldIndividualPlacementDisagreements": 1745,
+  "coverageMeaning": "All included descriptor identities observed or explicitly accounted for. Visible accurate static geometry/ISM only; no skeletal, unsupported, hidden or ambiguous geometry is invented. Stream and omitted-reason receipts retained.",
+  "verifiedEpoch": 1793675750.924267
+}

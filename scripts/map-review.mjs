@@ -104,7 +104,7 @@ export function validateMap(root){
    checkRegistration(p);
    requireValue(p.travel===false && finiteXYZ(m.landmarks[p.name]) && p.worldCm.every((v,i)=>eq(v,m.landmarks[p.name][i])),'unreviewed story anchor: '+p.name);
  }
- const html=fs.readFileSync(path.join(root,'dist','index.html'),'utf8');
+ const html=fs.readFileSync(path.join(root,'dist','story.html'),'utf8');
  requireValue(html.includes('assets/cartography/terrain-map.webp'),'homepage does not render reviewed terrain');
  const renderedPins=[...html.matchAll(/<[^<>]*\sdata-pin="[^"]+"[^<>]*>/g)].map(x=>attrs(x[0]));
  const bySlug=new Map(marks.map(p=>[slug(p.name),p]));

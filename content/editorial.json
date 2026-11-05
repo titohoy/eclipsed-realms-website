@@ -190,7 +190,7 @@
     },
     {
       "q": "Will the guide spoil the story?",
-      "a": "The main site introduces the world without revealing its endings. Quest details, character secrets and ending explanations stay behind an optional spoiler switch on World & story."
+      "a": "The website introduces the world and explains how to play. Character secrets, quest outcomes and ending explanations are left for you to discover in the game."
     },
     {
       "q": "Where should I start with the guide?",
@@ -198,7 +198,7 @@
     },
     {
       "q": "Do I need to enter training to unlock fast travel?",
-      "a": "No. Discover a Doll travel destination during your journey to make it available. The station at the old house opens after its attic story encounter."
+      "a": "No. Discover Doll travel destinations during your journey to make them available."
     }
   ],
   "decisions": [

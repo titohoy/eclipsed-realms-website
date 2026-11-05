@@ -3,6 +3,8 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import vm from 'node:vm';
 import {checkMap} from './map-review.mjs';
+import {checkSurvey} from './survey-watch.mjs';
+import {loadGuide,guideIndex} from './guide-data.mjs';
 import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const project=process.env.ECLIPSED_BIBLE_PROJECT || 'D:/Unreal Projects/EclipsedRealms';
@@ -16,16 +18,17 @@ walk(web);walk(path.join(project,'Atlas/data'));
 // Watcher clock ticks are health, not content changes. Read them independently.
 const health=json(path.join(web,'source-status.json'));
 const live=json(path.join(web,'live-sync.json'));
-const survey=checkMap(project,root);
-const healthy=health.status==='matched'&&!live.lastError&&!survey.mismatches.length;
+const survey=checkMap(project,root),worldSurvey=checkSurvey(project,root);
+const healthy=health.status==='matched'&&!live.lastError&&!survey.mismatches.length&&!worldSurvey.changes.length;
 const contentFiles=files.filter(p=>!['live-sync.json','source-status.json'].includes(path.basename(p)));
 const sources=Object.fromEntries([...new Set(contentFiles)].sort().map(p=>[path.relative(project,p).replaceAll('\\','/'),hash(read(p))]));
 sources['reviewed-open-world-cartography']=survey.digest;
+sources['reviewed-3d-world-and-cast']=worldSurvey.digest;
 const digest=hash(JSON.stringify(sources));
 const baseline=path.join(root,'content/reviewed-bible.json');
 const prev=fs.existsSync(baseline)?json(baseline):{sources:{}};
 const changed=[...new Set([...Object.keys(sources),...Object.keys(prev.sources)])].filter(k=>sources[k]!==prev.sources[k]);
-if(process.argv.includes('--check')){console.log(JSON.stringify({changed:changed.length>0,digest,files:changed,sourceHealthy:healthy,sourceStatus:health.status,sourceError:live.lastError,mapDigest:survey.digest,mapFilesNeedingReview:survey.mismatches},null,2));process.exit(0);}
+if(process.argv.includes('--check')){console.log(JSON.stringify({changed:changed.length>0,digest,files:changed,sourceHealthy:healthy,sourceStatus:health.status,sourceError:live.lastError,mapDigest:survey.digest,mapFilesNeedingReview:survey.mismatches,worldSurveyDigest:worldSurvey.digest,worldFilesNeedingReview:worldSurvey.changes},null,2));process.exit(0);}
 if(!healthy)throw Error('Bible snapshot is stale or its watcher reports an error. Preserve the published edition until the Bible is current.');
 if(changed.length&&!process.argv.includes('--accept-reviewed'))throw Error('Bible changed. Review changed sources and editorial.json before building with --accept-reviewed. Run --check for the exact files.');
 const registry={};const context=vm.createContext({ATLAS:{register:(id,data)=>registry[id]=data}});
@@ -54,20 +57,10 @@ const quests=current.quests.map(q=>({id:q.id,title:q.title,description:q.descrip
 const findings=[...(registry['project-comparison']?.projectComparison?.findings||[]),...(registry['document-library']?.documentLibrary?.projectChecks?.checks||[]).filter(f=>!f.status.startsWith('Aligned')).map(f=>({id:'library-'+f.id,title:f.title,project:f.project,kind:f.status}))];
 const data={edition:new Date().toISOString().slice(0,10),authority:editorial.authority,sourceDigest:digest,sourceGeneratedAt:current.generatedAt,hero:editorial.hero,regions:editorial.regions,characters,schools:editorial.schools,faq:editorial.faq,decisions,alignment:authored.alignment,chapters:current.chapters,quests,categories,entries,audit:editorial.decisions,unresolved:editorial.unresolved,sourceFindings:findings.map(f=>({id:f.id,title:f.title,project:f.project,kind:f.kind})),coverage:{combat:combat.entries.length,systems:entries.length-combat.entries.length,quests:quests.length,atlasFeatures:featureMap.size,sourceFiles:Object.keys(sources).length}};
 // Source records, review notes and hashes live in the private checkout, never in dist.
-const guidePath=path.join(root,'content/player-guide.json');
-if(!fs.existsSync(guidePath))throw Error('Player guide curation is required before publication.');
-const guide=json(guidePath);
-const reviewedEntries=Array.isArray(guide)?guide:guide.entries;
-const curated=new Map(reviewedEntries.map(e=>[e.id,e]));
-for(const e of entries){
- const c=curated.get(e.id);
- if(!c||c.sourceFingerprint!==hash(JSON.stringify(e)))throw Error('Player copy needs review for changed source entry: '+e.id);
-}
-for(const id of curated.keys())if(!checkedIds.has(id))throw Error('Source entry removed; review player guide: '+id);
-const publicEntries=entries.map(e=>curated.get(e.id)).filter(e=>e.publish).map(e=>({id:e.id,title:e.title,category:e.category,school:e.school||'',summary:e.summary,body:e.body,stats:e.stats||[],tags:e.tags||[],related:(e.related||[]).filter(id=>curated.get(id)?.publish)}));
-const publicData={hero:editorial.hero,regions:editorial.regions.map(({id,name,place,image,description})=>({id,name,place,image,description})),characters:characters.map(({id,name,role,intro,detail})=>({id,name,role,intro,detail})),schools:editorial.schools,faq:editorial.faq,decisions:decisions.map(({id,title,good,evil,setup,consequence,after})=>({id,title,good,evil,setup,consequence,after})),quests:quests.map(({id,title,description})=>({id,title,description:description.replace('existing dungeon route','dungeon passage').replace('existing evacuation','evacuation')})),categories:categories.map(({id,title})=>({id,title})),entries:publicEntries};
+const guideIndexEntries=guideIndex(loadGuide(root));
+const publicData={hero:editorial.hero,regions:editorial.regions.map(({id,name,place,image,description})=>({id,name,place,image,description})),characters:characters.map(({id,name,role,intro})=>({id,name,role,intro})),schools:editorial.schools,faq:editorial.faq,entries:guideIndexEntries};
 fs.writeFileSync(path.join(root,'content/source-snapshot.json'),JSON.stringify(data));
 fs.writeFileSync(path.join(root,'dist/game-data.json'),JSON.stringify(publicData));
-fs.writeFileSync(path.join(root,'content/sync-status.json'),JSON.stringify({authority:data.authority,builtAt:new Date().toISOString(),sourceDigest:digest,coverage:data.coverage,playerEntries:publicEntries.length},null,2)+'\n');
+fs.writeFileSync(path.join(root,'content/sync-status.json'),JSON.stringify({authority:data.authority,builtAt:new Date().toISOString(),sourceDigest:digest,coverage:data.coverage,playerEntries:guideIndexEntries.length},null,2)+'\n');
 fs.writeFileSync(baseline,JSON.stringify({reviewedAt:new Date().toISOString(),digest,sources},null,2)+'\n');
 console.log(JSON.stringify({ok:true,digest,changedFiles:changed.length,coverage:data.coverage}));

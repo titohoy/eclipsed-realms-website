@@ -6,14 +6,52 @@ function initAtlas(){
  const stage=surface($('[data-map=tour]')),free=surface($('[data-map=explore]'));const reduce=matchMedia('(prefers-reduced-motion: reduce)');let still=reduce.matches,modeOverride=false,frame=0,starts=[],last=-1,trigger=null;
  const cues={
  overview:['Across the realm','Follow the stranger','Down to the earth'],
- cage:['In the cellar','The bars slide aside','A step toward the light'],
+ cage:['A voice at the bars','Listen to the doll','The way beyond the cellar'],
  gallows:['Into the crowd','All eyes on the platform','A moment to speak'],
  thornhallow:['At the gate','A stranger on their knees','Choose whom to stand beside'],
  veilcross:['An enemy approaches','The distance closes','Your next move'],
- cairnhold:['Under the arch','Past the city guard','Into the capital']};
+ cairnhold:['Among the city streets','A word with the guard','Find your own way']};
+ let auto=null,autoFrame=0;
  let flight=null,flightState=null,raf=0,seen=true,lastTime=0,playing=null,previousY=scrollY;
- const sound=createSound(),soundButton=$('.sound-toggle');if(!(window.AudioContext||window.webkitAudioContext))soundButton.hidden=true;
- soundButton.addEventListener('click',async()=>{try{const on=await sound.toggle();soundButton.setAttribute('aria-pressed',String(on));$('b',soundButton).textContent=on?'Sound on':'Sound off';soundButton.title=on?'Mute scene sound':'Enable scene sound';wake();}catch{soundButton.hidden=true;}});
+ const playButton=$('.play-journey');
+ function syncPlay(){playButton.setAttribute('aria-pressed',String(!!auto));$('b',playButton).textContent=auto?'Pause':'Play story';$('span',playButton).textContent=auto?'Ⅱ':'▶';document.documentElement.classList.toggle('journey-playing',!!auto);}
+ function stopPlayback(){cancelAnimationFrame(autoFrame);autoFrame=0;if(auto){const t=performance.now();auto.elapsed+=t-auto.started;playButton._resume={...auto};}auto=null;syncPlay();}
+ function advanceStory(now){
+  if(!auto)return;const chapter=chapters[auto.index];const words=$('.chapter-copy',chapter).textContent.split(/\s+/).length;
+  const hold=Math.max(7800,words*70),transition=4000;let elapsed=auto.elapsed+now-auto.started;
+  if(elapsed>=hold+transition){
+   if(auto.index>=chapters.length-1){stopPlayback();playButton._resume=null;return;}
+   auto.index++;auto.elapsed=0;auto.started=now;elapsed=0;
+  }
+  const progress=elapsed<=hold?.38*Math.min(1,elapsed/hold):.38+.62*Math.min(1,(elapsed-hold)/transition);
+  const begin=starts[auto.index],end=starts[auto.index+1]??(begin+chapters[auto.index].offsetHeight*.75);
+  window.scrollTo({top:begin+(end-begin)*progress,behavior:'instant'});queue();
+  autoFrame=requestAnimationFrame(advanceStory);
+ }
+ playButton.addEventListener('click',()=>{if(auto){stopPlayback();return;}
+  if(still){still=false;modeOverride=true;updateStill();}
+  playing=null;auto={...autoFromScroll(),started:performance.now()};syncPlay();autoFrame=requestAnimationFrame(advanceStory);
+ });
+ // Play starts from wherever the reader is: invert advanceStory's scroll mapping for the current chapter and position.
+ function autoFromScroll(){
+  const y=scrollY;let index=0;for(let i=0;i<chapters.length;i++){if(starts[i]<=y+2)index=i;else break;}
+  if(index>=chapters.length-1&&y>=starts[chapters.length-1]+chapters[chapters.length-1].offsetHeight*.7)index=0;
+  const chapter=chapters[index],words=$('.chapter-copy',chapter).textContent.split(/\s+/).length,hold=Math.max(7800,words*70),transition=4000;
+  const begin=starts[index],end=starts[index+1]??(begin+chapter.offsetHeight*.75),p=end>begin?Math.max(0,Math.min(1,(y-begin)/(end-begin))):0;
+  const elapsed=p<=.38?hold*(p/.38):hold+transition*((p-.38)/.62);
+  return {index,elapsed:index===0&&y>=starts[chapters.length-1]?0:elapsed};
+ }
+ for(const event of ['wheel','touchstart'])window.addEventListener(event,()=>{if(auto)stopPlayback()},{passive:true});
+ document.addEventListener('keydown',e=>{if(auto&&['ArrowDown','ArrowUp','PageDown','PageUp','Home','End',' '].includes(e.key)&&!e.target.closest('button,input,select'))stopPlayback();});
+ all('.chapter-index a,.begin-tour,.folio-count,[data-replay],[data-stance],[data-explore]').forEach(a=>a.addEventListener('click',()=>{if(auto)stopPlayback();playButton._resume=null;}));
+ document.addEventListener('visibilitychange',()=>{if(document.hidden&&auto)stopPlayback();});
+ let soundOn=false;const sound=createSound(),soundButton=$('.sound-toggle');if(!(window.AudioContext||window.webkitAudioContext))soundButton.hidden=true;
+ soundButton.addEventListener('click',async()=>{try{const on=await sound.toggle();soundOn=on;soundButton.setAttribute('aria-pressed',String(on));syncLoop();$('b',soundButton).textContent=on?'Sound on':'Sound off';soundButton.title=on?'Mute scene sound':'Enable scene sound';wake();}catch{soundButton.hidden=true;}});
+ const loopEls=new Map(all('.chapter-loop').map(v=>[v.dataset.loop,v]));
+ // Rendered chapter loops (dist/assets/story/<key>.mp4): shown instead of the live scene while a chapter holds; the map flight shows between chapters. Muted unless Sound is on; paused when off screen.
+ function syncLoop(){if(!loopEls.size||!flightState)return;const s=flightState,key=chapters[s.active].dataset.anchor,v=loopEls.get(key),show=Boolean(v)&&(s.travel<.14||s.travel>.86);
+  for(const [k,el] of loopEls){const on=show&&el===v;if(on&&!el.classList.contains('on'))try{el.currentTime=0}catch{}el.classList.toggle('on',on);el.muted=!soundOn;const run=on&&!still&&seen&&!document.hidden&&!dialog.open;if(run){if(el.paused)el.play().catch(()=>{});}else if(!el.paused)el.pause();}
+  viewport.classList.toggle('loop-on',show);}
  const cueLine=$('.cue-text'),cueFill=$('.cue-track i');
  function tick(time){raf=0;if(!seen||document.hidden||dialog.open||!flightState)return;
   const s={...flightState};if(playing&&s.active===playing.idx&&!still){
@@ -21,18 +59,19 @@ function initAtlas(){
     if(phase>=1){playing.done=true;$('.journey').classList.remove('performing');}
   }
   s.magic=journey.classList.contains('use-magic');s.still=still;
-  const key=chapters[s.active].dataset.anchor,c=key==='overview'&&s.active===6?['Back above the hills','All roads remain open','The rest is yours']:cues[key];
+  const key=chapters[s.active].dataset.anchor,c=key==='overview'&&s.active===chapters.length-1?['Back above the hills','All roads remain open','The rest is yours']:(cues[key]||['The road ahead','A place to discover','Look closer']);
   const step=Math.min(2,Math.floor(s.phase*3));sound.scene(key,step,s.magic);journey.style.setProperty('--scene-phase',String(s.phase));cueLine.textContent=s.travel>.13&&s.travel<.86?'Across the realm':c[step];
   cueFill.style.transform='scaleX('+clamp(s.phase,.025,1)+')';
-  if(flight)try{flight.paint(s,time);}catch(error){console.warn('Returning to the illustrated map:',error.message);flight=null;viewport.classList.remove('in-flight');$('.flight-surface')?.remove();queue();}
+  if(flight&&!viewport.classList.contains('loop-on'))try{flight.paint(s,time);}catch(error){console.warn('Returning to the illustrated map:',error.message);flight=null;viewport.classList.remove('in-flight');$('.flight-surface')?.remove();queue();}
   if(!still&&(flight||playing&&!playing.done))raf=requestAnimationFrame(scheduled);
  }
  function scheduled(t){raf=0;if(t-lastTime<31){raf=requestAnimationFrame(scheduled);return;}lastTime=t;tick(t)}
  function wake(){if(!raf&&seen&&!document.hidden&&!dialog.open)raf=requestAnimationFrame(tick)}
- function playScene(section){const idx=chapters.indexOf(section);if(idx<1||idx>5||still)return;sound.reset();playing={idx,start:performance.now()};journey.classList.add('performing');wake();}
+ function playScene(section){const idx=chapters.indexOf(section);if(idx<1||idx>5||still)return;sound.reset();const lv=loopEls.get(section.dataset.anchor);if(lv){try{lv.currentTime=0}catch{}}playing={idx,start:performance.now()};journey.classList.add('performing');wake();}
  all('[data-replay]').forEach(b=>b.addEventListener('click',()=>playScene(b.closest('.chapter'))));
- new IntersectionObserver(rows=>{seen=rows[0].isIntersecting;sound.visible(seen&&!document.hidden&&!dialog.open);if(seen)wake();},{threshold:0}).observe(viewport);
- document.addEventListener('visibilitychange',()=>{sound.visible(seen&&!document.hidden&&!dialog.open);if(!document.hidden)wake()});
+ new IntersectionObserver(rows=>{seen=rows[0].isIntersecting;syncLoop();sound.visible(seen&&!document.hidden&&!dialog.open);if(seen)wake();},{threshold:0}).observe(viewport);
+ document.addEventListener('visibilitychange',()=>{syncLoop();sound.visible(seen&&!document.hidden&&!dialog.open);if(!document.hidden)wake()});
+ window.addEventListener('castready',wake);
  window.addEventListener('flightfallback',()=>{flight=null;queue()});
  const freeCam={x:520,y:468,z:1},maxZoom=8;let selected='',drag=null;
  function project(map,w,h,cx,cy,k,tx,ty,explore,activeAnchor){
@@ -45,7 +84,7 @@ function initAtlas(){
    const readable=(chosen||((p.major||detail)&&!collision&&!storyOccludes))&&xx>=3&&xx+p.len<=w-3; p.label.style.display=readable?'':'none';p.label.setAttribute('x',String(9*side));p.label.setAttribute('text-anchor',side===1?'start':'end');if(readable)boxes.push(b);p.g.toggleAttribute('data-selected',chosen);
   }
  }
- function updateStill(){journey.classList.toggle('still',still);motion.textContent=still?'Motion off':'Motion on';motion.setAttribute('aria-pressed',String(!still));all('[data-replay]').forEach(b=>b.hidden=still);motion.title=still?'Enable animated movement':'Use still scenes';}
+ function updateStill(){journey.classList.toggle('still',still);syncLoop();motion.textContent=still?'Motion off':'Motion on';motion.setAttribute('aria-pressed',String(!still));all('[data-replay]').forEach(b=>b.hidden=still);motion.title=still?'Enable animated movement':'Use still scenes';}
  function measure(){const mast=$('.masthead').getBoundingClientRect().height;starts=chapters.map(e=>e.getBoundingClientRect().top+scrollY-mast);queue();if(dialog.open)renderFree()}
  function draw(){
   frame=0;const w=viewport.clientWidth,h=viewport.clientHeight,y=scrollY;let i=0;while(i+1<starts.length&&y>=starts[i+1])i++;
@@ -54,14 +93,14 @@ function initAtlas(){
   if(i===j)t=0;
   if(playing&&(Math.abs(previousY-y)>2||playing.idx!==active)){playing=null;journey.classList.remove('performing');}previousY=y;
   const p=still?.57:(active===i?clamp(f/.38,0,1):0);flightState={i:still?active:i,j:still?active:j,travel:still?0:t,phase:p,active};
-  if(still)t=active===i?0:1;wake();
+  if(still)t=active===i?0:1;syncLoop();wake();
   const a=chapters[i].dataset,b=chapters[j].dataset,c=chapters[active].dataset,cx=mix(+a.cx,+b.cx,t),cy=mix(+a.cy,+b.cy,t);
   const mobile=w<=780;const base=mobile?Math.max(w/590,h*.42/580):Math.max(w*.63/640,h*.9/700);
   const across=clamp(Math.hypot(+a.cx-+b.cx,+a.cy-+b.cy)/250,0,1);const dip=+a.zoom>2&&+b.zoom>2?1+1.5*across*Math.sin(Math.PI*t)**2:1;
   const k=base*Math.exp(mix(Math.log(+a.zoom),Math.log(+b.zoom),t))/dip;
   const tx=w*(mobile?.5:.704),ty=h*(mobile?.245:.47);if(!flight)project(stage,w,h,cx,cy,k,tx,ty,false,c.anchor);else stage.svg.setAttribute('viewBox','0 0 '+w+' '+h);
   const bar=$('.map-scale b');bar.style.width=`${100/4032*1000*k}px`;
-  if(active!==last){last=active;dock.forEach((a,n)=>{if(n===active)a.setAttribute('aria-current','step');else a.removeAttribute('aria-current')});$('.folio-count b').textContent=String(active).padStart(2,'0');$('.location-name').textContent=$('.sr-tour',chapters[active]).textContent;
+  if(active!==last){last=active;dock.forEach((a,n)=>{if(n===active)a.setAttribute('aria-current','step');else a.removeAttribute('aria-current')});const rail=$('.chapter-index'),now=dock[active];if(now)rail.scrollLeft=Math.max(0,now.offsetLeft-rail.offsetLeft-rail.clientWidth/2);$('.folio-count b').textContent=String(active).padStart(2,'0');$('.location-name').textContent=$('.sr-tour',chapters[active]).textContent;
    for(const group of stage.tableaux){const focused=group.dataset.tableau===c.anchor;group.toggleAttribute('data-live',focused);group.style.visibility=focused||c.anchor==='overview'?'visible':'hidden';$('.miniature',group).setAttribute('transform',`scale(${focused?.33:.19})`);}
   }
  }
@@ -71,10 +110,10 @@ function initAtlas(){
  all('[data-stance]').forEach(b=>b.addEventListener('click',()=>{const magic=b.dataset.stance==='magic';playScene(b.closest('.chapter'));journey.classList.toggle('use-magic',magic);wake();all('[data-stance]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));$('.stance-note').textContent=magic?'Golden light holds the enemy in place. Binding Light stops movement, but the enemy can still fight.':'Catch the swing on your shield. Now there’s an opening to strike.';}));
  const freeScale=()=>Math.min(mapbox.clientWidth/665,mapbox.clientHeight/685)*freeCam.z;
  function renderFree(){if(!dialog.open)return;const w=mapbox.clientWidth,h=mapbox.clientHeight;project(free,w,h,freeCam.x,freeCam.y,freeScale(),w/2,h/2,true,'overview')}
- function choose(id){selected=id;chooser.value=id;const p=free.pins.find(p=>p.id===id);if(p){Object.assign(freeCam,{x:p.x,y:p.y,z:2.75});$('.free-caption').textContent=p.g.dataset.name+' · travel waypoint';}else{Object.assign(freeCam,{x:526,y:465,z:1});$('.free-caption').textContent='All regional waypoints';}renderFree()}
+ function choose(id){const viewLink=$('.directory-3d');if(viewLink)viewLink.href='realm.html'+(id?'?place='+encodeURIComponent(id):'');selected=id;chooser.value=id;const p=free.pins.find(p=>p.id===id);if(p){Object.assign(freeCam,{x:p.x,y:p.y,z:2.75});$('.free-caption').textContent=p.g.dataset.name+' · travel waypoint';}else{Object.assign(freeCam,{x:526,y:465,z:1});$('.free-caption').textContent='All regional waypoints';}renderFree()}
  function zoom(factor){freeCam.z=clamp(freeCam.z*factor,.68,maxZoom);renderFree()}
- all('[data-explore]').forEach(b=>b.addEventListener('click',()=>{trigger=b;dialog.showModal();sound.visible(false);document.body.classList.add('body-dialog');choose('');$('[data-close]').focus()}));
- $('[data-close]').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>{document.body.classList.remove('body-dialog');trigger?.focus({preventScroll:true});sound.visible(seen&&!document.hidden);wake();});dialog.addEventListener('click',e=>{if(e.target!==dialog)return;const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()});
+ all('[data-explore]').forEach(b=>b.addEventListener('click',()=>{trigger=b;dialog.showModal();syncLoop();sound.visible(false);document.body.classList.add('body-dialog');choose('');$('[data-close]').focus()}));
+ $('[data-close]').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>{syncLoop();document.body.classList.remove('body-dialog');trigger?.focus({preventScroll:true});sound.visible(seen&&!document.hidden);wake();});dialog.addEventListener('click',e=>{if(e.target!==dialog)return;const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()});
  chooser.addEventListener('change',()=>choose(chooser.value));all('[data-zoomctl]').forEach(b=>b.addEventListener('click',()=>b.dataset.zoomctl==='reset'?choose(''):zoom(b.dataset.zoomctl==='in'?1.4:1/1.4)));
  mapbox.addEventListener('keydown',e=>{if(e.target!==mapbox)return;const s=45/freeScale();if(e.key==='ArrowLeft')freeCam.x-=s;else if(e.key==='ArrowRight')freeCam.x+=s;else if(e.key==='ArrowUp')freeCam.y-=s;else if(e.key==='ArrowDown')freeCam.y+=s;else if(['+','='].includes(e.key))zoom(1.4);else if(e.key==='-')zoom(1/1.4);else if(e.key==='Home')choose('');else return;e.preventDefault();freeCam.x=clamp(freeCam.x,0,1000);freeCam.y=clamp(freeCam.y,0,1000);renderFree()});
  mapbox.addEventListener('pointerdown',e=>{if(e.button!==0||e.target.closest('button'))return;drag={id:e.pointerId,x:e.clientX,y:e.clientY,cx:freeCam.x,cy:freeCam.y,pin:e.target.closest('[data-pin]')?.dataset.pin,moved:false};mapbox.setPointerCapture(e.pointerId)});

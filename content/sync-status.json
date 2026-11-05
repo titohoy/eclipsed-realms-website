@@ -1,13 +1,13 @@
 {
   "authority": "Eclipsed Realms · Development Bible",
-  "builtAt": "2026-11-03T01:57:18.380Z",
-  "sourceDigest": "7aa69aa85286f29ee5f1190bc331378388894e0838612b27f9ead219d422359e",
+  "builtAt": "2026-11-03T03:44:21.116Z",
+  "sourceDigest": "c0ce86124835bff80381f5841b823b67f5f814b1b8b9b455cc82ca2b57d973fe",
   "coverage": {
     "combat": 141,
     "systems": 38,
     "quests": 42,
     "atlasFeatures": 584,
-    "sourceFiles": 67
+    "sourceFiles": 68
   },
   "playerEntries": 163
 }

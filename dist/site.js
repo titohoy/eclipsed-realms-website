@@ -3,45 +3,5 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const menu=$('.menu-toggle');
 menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',open);menu.setAttribute('aria-label',open?'Close navigation':'Open navigation');$('#main-nav').classList.toggle('open',open);});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation');$('#main-nav').classList.remove('open');}});
-const titles={weapons:'Weapons & techniques',reliefs:'Magic & spells',rules:'Combat essentials',equipment:'Armor & equipment',progression:'Your character',statuses:'Survival & recovery',world:'Exploration & travel',society:'Choices & consequences',coop:'Playing together',enemies:'Creatures & companions'};
-const entryLink=e=>`<a href="guide.html?entry=${encodeURIComponent(e.id)}" data-entry="${esc(e.id)}">${esc(e.title)} <span aria-hidden="true">↗</span></a>`;
-function guide(D){
- const content=$('#guide-content'),search=$('#guide-search'),clear=$('#clear-search');let limit=24,lastQuery='';
- const nav=(url,scroll=true)=>{history.pushState({},'',url);limit=24;render();if(scroll){content.scrollIntoView({block:'start'});content.setAttribute('tabindex','-1');content.focus({preventScroll:true});}};
- const paragraph=s=>`<p>${esc(s)}</p>`;
- function render(){
-  const params=new URLSearchParams(location.search);const id=params.get('entry');let category=params.get('category')||'all',school=params.get('school')||'',q=params.get('q')||'';
-  if(!titles[category])category='all';if(!['Holy','Blood','Dark'].includes(school))school='';if(school)category='reliefs';
-  search.value=q;clear.hidden=!q;document.body.classList.toggle('reading-entry',!!id);
-  $$('[data-category]').forEach(a=>{if(a.dataset.category===category)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
-  if(id){const e=D.entries.find(x=>x.id===id);if(!e){content.innerHTML='<div class="empty-message"><h2>That page has moved.</h2><p>Browse the guide to find what you need.</p><a class="button" href="guide.html">Explore the guide ↗</a></div>';return;}
-   document.title=e.title+' · Eclipsed Realms';$$('[data-category]').forEach(a=>{if(a.dataset.category===e.category)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
-   const related=[...new Set([...(e.related||[]),...D.entries.filter(x=>e.school&&x.school===e.school&&x.id!==id).map(x=>x.id),...D.entries.filter(x=>x.category===e.category&&x.id!==id).map(x=>x.id)])].map(id=>D.entries.find(x=>x.id===id)).filter(Boolean).slice(0,4);
-   const readTime=Math.max(1,Math.ceil([e.summary,...e.body].join(' ').split(/\s+/).length/200));
-   content.innerHTML=`<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="guide.html${lastQuery?'?'+lastQuery:''}" data-back>Player guide</a><span aria-hidden="true">/</span><a href="guide.html?category=${e.category}" data-category-link>${esc(titles[e.category])}</a></nav><article class="guide-article"><p class="eyebrow">${esc(e.school||titles[e.category])} · ${readTime} MIN READ</p><h1>${esc(e.title)}</h1><p class="article-lead">${esc(e.summary)}</p>${e.body.map(paragraph).join('')}${e.stats.length?`<h2>At a glance</h2><dl class="stat-list">${e.stats.map(s=>`<div><dt>${esc(s.label)}</dt><dd>${esc(s.value)}</dd></div>`).join('')}</dl>`:''}</article><section class="related"><h2>Keep exploring</h2><div>${related.map(entryLink).join('')}</div></section><a class="inline-link" href="guide.html${lastQuery?'?'+lastQuery:''}" data-back>← Back to the guide</a>`;
-   return;
-  }
-  lastQuery=params.toString();document.title='Player guide · Eclipsed Realms';
-  const words=q.toLowerCase().trim().split(/\s+/).filter(Boolean);const entries=D.entries.filter(e=>(category==='all'||e.category===category)&&(!school||e.school===school)&&words.every(w=>[e.title,e.summary,...e.body,...e.tags].join(' ').toLowerCase().includes(w))).sort((a,b)=>a.title.localeCompare(b.title));
-  content.innerHTML=`${!q&&category==='all'?`<div class="guide-welcome"><h2>Start with a question.</h2><div class="popular-links">${[['relief.deployment-and-influence','How do I use magic?'],['world.cursed-doll-network','How does fast travel work?'],['coop.join-game','How do I play with friends?'],['core-traits','How should I build my character?']].map(([id,title])=>entryLink({id,title})).join('')}</div></div>`:''}<div class="results-heading"><h2>${q?'Search results':esc(category==='all'?'Browse the guide':titles[category])}</h2><p aria-live="polite">${entries.length} ${entries.length===1?'article':'articles'}</p></div>${category==='reliefs'?`<div class="filter-pills" role="group" aria-label="Magic schools">${['','Holy','Blood','Dark'].map(s=>`<button data-magic="${s}" aria-pressed="${s===school}">${s||'All magic'}</button>`).join('')}</div>`:''}<div class="guide-grid">${entries.slice(0,limit).map(e=>`<a class="guide-card" href="guide.html?entry=${encodeURIComponent(e.id)}" data-entry="${esc(e.id)}"><span class="eyebrow">${esc(e.school||titles[e.category])}</span><h3>${esc(e.title)}</h3><p>${esc(e.summary)}</p><span class="card-action">Read more <span aria-hidden="true">↗</span></span></a>`).join('')}</div>${!entries.length?'<div class="empty-message"><h3>No matching articles.</h3><p>Try another word, or search across all topics.</p><button id="reset-search" class="button secondary">Clear search & filters</button></div>':''}${entries.length>limit?'<button class="button secondary load-more" id="load-more">Show more articles ↓</button>':''}`;
-  $('#load-more')?.addEventListener('click',()=>{limit+=24;render();});
-  $('#reset-search')?.addEventListener('click',()=>nav('guide.html',false));
-  $$('[data-magic]').forEach(b=>b.addEventListener('click',()=>{params.delete('entry');params.set('category','reliefs');b.dataset.magic?params.set('school',b.dataset.magic):params.delete('school');nav('guide.html?'+params,false);}));
- }
- document.addEventListener('click',e=>{const a=e.target.closest('a');if(!a||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey||e.button!==0)return;if(a.hasAttribute('data-entry')||a.hasAttribute('data-category')||a.hasAttribute('data-category-link')||a.hasAttribute('data-back')){e.preventDefault();nav(a.getAttribute('href'));}});
- search.addEventListener('input',()=>{const p=new URLSearchParams(location.search);p.delete('entry');search.value?p.set('q',search.value):p.delete('q');history.replaceState({},'','guide.html'+(p.size?'?'+p:''));limit=24;render();});
- clear.addEventListener('click',()=>{const p=new URLSearchParams(location.search);p.delete('q');nav('guide.html'+(p.size?'?'+p:''),false);search.focus();});
- addEventListener('popstate',()=>{limit=24;render();});render();
-}
-function story(D){
- $('#spoilers').checked=false;$('#spoilers').addEventListener('change',e=>{$('#story-secrets').hidden=!e.target.checked;});
- const route=()=>{const answers=D.decisions.map(d=>$(`input[name="${d.id}"]:checked`)?.value||'');const good=answers.filter(x=>x==='Good').length,evil=answers.filter(x=>x==='Evil').length,incl=$('#inclination').value;
- let title='Your path is still open',copy='Answer the hanging decision first. If you missed it, you will be asked before your route is chosen.';
- if(answers[0]){if(Number($('#demons').value)<6)copy='Face all six distinct demons before your route is chosen.';else if(good===evil&&incl==='Unwritten')copy='Your answers are tied. With an Unwritten inclination, the game chooses a result once and saves it. This example cannot predict that result.';else{const kingdom=good>evil||(good===evil&&incl==='Benevolent');title=kingdom?'The Kingdom path':'The Cult path';copy=kingdom?'Your next story is No More Offerings. Stand against the Demon Father.':'Your next story is The Crown Must Fall. March with the Cult against the Kingdom.';if(good===evil)copy+=' Your starting inclination breaks the tie.';}}
- $('#route-output').innerHTML=`<p class="eyebrow">${good} GOOD · ${evil} EVIL</p><h3>${title}</h3><p>${copy}</p><p class="small">Karma, reputation and personality are separate from these five moral decisions.</p>`;
- };
- $$('.choice-row input, .route-controls select').forEach(e=>e.addEventListener('change',route));route();
- $('#quest-search').addEventListener('input',e=>{const words=e.target.value.toLowerCase().split(/\s+/).filter(Boolean);let n=0;$$('[data-quest]').forEach(d=>{const match=words.every(w=>d.textContent.toLowerCase().includes(w));d.hidden=!match;if(match)n++;});$('#quest-count').textContent=n+' '+(n===1?'quest':'quests');$('#quest-empty').hidden=n!==0;});
-}
 const view=document.body.dataset.view;
-if(['guide','story'].includes(view))fetch('game-data.json').then(r=>{if(!r.ok)throw Error('Unable to load');return r.json();}).then(D=>({guide,story}[view])(D)).catch(()=>{if(view==='guide')$('#guide-content').innerHTML='<p class="callout">The guide could not load. Please refresh the page and try again.</p>';});
+if(view==='guide')import('./guide.js').then(m=>m.initGuide());
