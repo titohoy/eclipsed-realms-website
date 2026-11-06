@@ -1,0 +1,109 @@
+{
+    "roles":  {
+                  "doll":  {
+                               "file":  "doll.glb",
+                               "height":  0.83
+                           },
+                  "traveler":  {
+                                   "file":  "traveler.glb",
+                                   "height":  1.76
+                               },
+                  "villager":  [
+                                   {
+                                       "file":  "villager-woman.glb",
+                                       "height":  1.68
+                                   },
+                                   {
+                                       "file":  "heroes/ed39128e1adc2bd71e799248.glb",
+                                       "height":  1.78
+                                   }
+                               ],
+                  "fighter":  {
+                                  "file":  "guard.glb",
+                                  "height":  1.79
+                              },
+                  "guard":  {
+                                "file":  "guard.glb",
+                                "height":  1.79
+                            },
+                  "mage":  {
+                               "file":  "mage.glb",
+                               "height":  1.75
+                           },
+                  "companion":  {
+                                    "file":  "villager-woman.glb",
+                                    "height":  1.7
+                                },
+                  "cultist-1":  {
+                                    "file":  "cultist-1.glb",
+                                    "height":  1.82,
+                                    "motions":  {
+                                                    "walk":  {
+                                                                 "file":  "clips/973645d7d06ece9b1f0fb8079211ae93.glb",
+                                                                 "clip":  "m_242eafad6a82f0c64d51"
+                                                             }
+                                                }
+                                },
+                  "cultist-2":  {
+                                    "file":  "cultist-2.glb",
+                                    "height":  1.85,
+                                    "motions":  {
+                                                    "walk":  {
+                                                                 "file":  "clips/94a46439f64e52428da97fb0a29e613f.glb",
+                                                                 "clip":  "m_1f130100bbeb02f33d74"
+                                                             }
+                                                }
+                                },
+                  "demon":  {
+                                "file":  "heroes/f58738520e3473d415a52050.glb",
+                                "height":  3.7,
+                                "motions":  {
+                                                "roar":  {
+                                                             "file":  "clips/977ca6d5c0424e96e7135e394519202a.glb",
+                                                             "clip":  "m_4ea5e067900cd49a0144"
+                                                         },
+                                                "intimidation":  {
+                                                                     "file":  "clips/a7bf26923fe717df49c3f852bd8417b9.glb",
+                                                                     "clip":  "m_d7611e830fbe2fa63db0"
+                                                                 }
+                                            }
+                            },
+                  "nun":  {
+                              "file":  "heroes/fa3bc36fecca351b5f593390.glb",
+                              "height":  1.73,
+                              "tint":  {
+                                           "materials":  [
+                                                             15,
+                                                             18
+                                                         ],
+                                           "factor":  0.13,
+                                           "satLow":  0.12,
+                                           "satHigh":  0.32,
+                                           "flat":  {
+                                                        "materials":  [
+                                                                          16
+                                                                      ],
+                                                        "factor":  0.2
+                                                    }
+                                       },
+                              "eyes":  {
+                                           "materials":  [
+                                                             4,
+                                                             5
+                                                         ],
+                                           "color":  "#060405"
+                                       }
+                          }
+              },
+    "props":  {
+                  "knife":  {
+                                "file":  "knife.glb"
+                            },
+                  "shield":  {
+                                 "file":  "shield.glb"
+                             },
+                  "holy-relief":  {
+                                      "file":  "holy-relief.glb"
+                                  }
+              }
+}

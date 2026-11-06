@@ -2,3 +2,12 @@ body[data-view=home]{background:#0c1715}.cinematic-ad{height:calc(100svh - 82px)
 /* Poster still (rendered from the film's final wide shot) shows while the scene streams in, and stays as the fallback without WebGL. */
 .cinematic-ad{background:#090f10 url(assets/film-poster.jpg) 58% 50%/cover no-repeat}.advert-canvas{transition:opacity .8s ease}.cinematic-ad:not([data-film-state=ready]) .advert-canvas,.cinematic-ad:not([data-film-state=ready]) .ad-fade{opacity:0}
 .advert-video{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;transition:opacity .8s ease}.cinematic-ad:not([data-film-state=ready]) .advert-video{opacity:0}
+/* Loading indicator: visible over the poster until the film is playing, so a slow connection never looks like a dead page. */
+.ad-loading{position:absolute;right:6.5%;bottom:84px;z-index:3;display:flex;align-items:center;gap:12px;padding:11px 16px;background:#0a1313d9;border:1px solid #c1ac7140;color:#e9d9b4;font:600 12px/1 system-ui;letter-spacing:.04em;opacity:0;visibility:hidden;transition:opacity .5s,visibility .5s;pointer-events:none}
+.cinematic-ad[data-film-state=loading] .ad-loading{opacity:1;visibility:visible}
+.ad-spin{width:15px;height:15px;border-radius:50%;border:2px solid #dfc17c40;border-top-color:#dfc17c;animation:ad-spin .9s linear infinite;flex:none}
+.ad-loading-bar{position:relative;width:96px;height:3px;background:#7f835b44;overflow:hidden}
+.ad-loading-bar i{position:absolute;inset:0;background:#dfc17c;transform:scaleX(.04);transform-origin:left;transition:transform .3s ease-out}
+@keyframes ad-spin{to{transform:rotate(360deg)}}
+@media(max-width:780px){.ad-loading{right:6%;bottom:78px;padding:9px 12px;font-size:11px}.ad-loading-bar{width:60px}}
+@media(prefers-reduced-motion:reduce){.ad-spin{animation-duration:2.4s}.ad-loading,.ad-loading-bar i{transition:none}}
